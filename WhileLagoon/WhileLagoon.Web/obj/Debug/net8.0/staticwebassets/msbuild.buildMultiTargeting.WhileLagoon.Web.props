@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\WhileLagoon.Web.props" />
+</Project>
