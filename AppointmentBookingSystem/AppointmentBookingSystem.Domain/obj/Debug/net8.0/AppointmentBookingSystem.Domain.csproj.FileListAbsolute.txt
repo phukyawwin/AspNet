@@ -1,0 +1,12 @@
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\bin\Debug\net8.0\AppointmentBookingSystem.Domain.deps.json
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\bin\Debug\net8.0\AppointmentBookingSystem.Domain.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\bin\Debug\net8.0\AppointmentBookingSystem.Domain.pdb
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\AppointmentBookingSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\AppointmentBookingSystem.Domain.AssemblyInfoInputs.cache
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\AppointmentBookingSystem.Domain.AssemblyInfo.cs
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\AppointmentBookingSystem.Domain.csproj.CoreCompileInputs.cache
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\AppointmentBookingSystem.Domain.sourcelink.json
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\AppointmentBookingSystem.Domain.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\refint\AppointmentBookingSystem.Domain.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\AppointmentBookingSystem.Domain.pdb
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Domain\obj\Debug\net8.0\ref\AppointmentBookingSystem.Domain.dll

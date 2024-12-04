@@ -1,0 +1,16 @@
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\bin\Debug\net8.0\AppointmentBookingSystem.Application.deps.json
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\bin\Debug\net8.0\AppointmentBookingSystem.Application.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\bin\Debug\net8.0\AppointmentBookingSystem.Application.pdb
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\bin\Debug\net8.0\AppointmentBookingSystem.Domain.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\bin\Debug\net8.0\AppointmentBookingSystem.Domain.pdb
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\AppointmentBookingSystem.Application.csproj.AssemblyReference.cache
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\AppointmentBookingSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\AppointmentBookingSystem.Application.AssemblyInfoInputs.cache
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\AppointmentBookingSystem.Application.AssemblyInfo.cs
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\AppointmentBookingSystem.Application.csproj.CoreCompileInputs.cache
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\AppointmentBookingSystem.Application.sourcelink.json
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\Appointm.8F451B61.Up2Date
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\AppointmentBookingSystem.Application.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\refint\AppointmentBookingSystem.Application.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\AppointmentBookingSystem.Application.pdb
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Application\obj\Debug\net8.0\ref\AppointmentBookingSystem.Application.dll
