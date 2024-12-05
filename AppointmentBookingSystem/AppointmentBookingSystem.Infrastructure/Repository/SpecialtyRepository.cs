@@ -27,7 +27,7 @@ namespace AppointmentBookingSystem.Infrastructure.Repository
 
         public void Update(Specialty entity)
         {
-            _db.Specialties.Update(entity);
+            _db.Specialty.Update(entity);
         }
     }
 }

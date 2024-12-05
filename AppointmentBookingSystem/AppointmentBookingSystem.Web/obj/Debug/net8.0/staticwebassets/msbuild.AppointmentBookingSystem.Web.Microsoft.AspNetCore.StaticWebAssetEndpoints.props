@@ -4,13 +4,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AppointmentBookingSystem.Web.ow5fwu9xnn.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-WAzRgVDBq52r6SNQVJcCPQMI3wTVSUHrneuJiue5FfU="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1146"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022WAzRgVDBq52r6SNQVJcCPQMI3wTVSUHrneuJiue5FfU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 04 Dec 2024 18:30:28 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1146"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022WAzRgVDBq52r6SNQVJcCPQMI3wTVSUHrneuJiue5FfU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Dec 2024 07:19:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AppointmentBookingSystem.Web/AppointmentBookingSystem.Web.ow5fwu9xnn.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AppointmentBookingSystem.Web.ow5fwu9xnn.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ow5fwu9xnn"},{"Name":"integrity","Value":"sha256-WAzRgVDBq52r6SNQVJcCPQMI3wTVSUHrneuJiue5FfU="},{"Name":"label","Value":"_content/AppointmentBookingSystem.Web/AppointmentBookingSystem.Web.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1146"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022WAzRgVDBq52r6SNQVJcCPQMI3wTVSUHrneuJiue5FfU=\u0022"},{"Name":"Last-Modified","Value":"Wed, 04 Dec 2024 18:30:28 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1146"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022WAzRgVDBq52r6SNQVJcCPQMI3wTVSUHrneuJiue5FfU=\u0022"},{"Name":"Last-Modified","Value":"Thu, 05 Dec 2024 07:19:33 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/AppointmentBookingSystem.Web/css/site.c2tiyv64ts.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</AssetFile>

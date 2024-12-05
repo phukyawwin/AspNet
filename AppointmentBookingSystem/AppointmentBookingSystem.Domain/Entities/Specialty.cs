@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AppointmentBookingSystem.Domain.Entities
 {
-    public class Specialty
+    public class Specialty : ITimestampedEntity
     {
         public int Id { get; set; }
         [MaxLength(50)]

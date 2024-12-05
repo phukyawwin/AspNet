@@ -9,6 +9,7 @@ namespace AppointmentBookingSystem.Application.Common.Interfaces
     public interface IUnitOfWork
     {
         ISpecialtyRepository SpecialtyRepository { get; }
+        IDoctorRepository DoctorRepository { get; }
         void Save();
     }
 }

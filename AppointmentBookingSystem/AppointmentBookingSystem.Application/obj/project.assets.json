@@ -10,7 +10,10 @@
         },
         "runtime": {
           "bin/placeholder/AppointmentBookingSystem.Domain.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },

@@ -10,6 +10,7 @@ D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Azure.Core.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Azure.Identity.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Humanizer.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.Build.Locator.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -23,7 +24,9 @@ D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
@@ -145,7 +148,9 @@ D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\AppointmentBookingSystem.Application.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\AppointmentBookingSystem.Domain.dll
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\AppointmentBookingSystem.Infrastructure.dll
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\AppointmentBookingSystem.Application.pdb
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\AppointmentBookingSystem.Infrastructure.pdb
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\AppointmentBookingSystem.Domain.pdb
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\obj\Debug\net8.0\AppointmentBookingSystem.Web.csproj.AssemblyReference.cache
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\obj\Debug\net8.0\AppointmentBookingSystem.Web.GeneratedMSBuildEditorConfig.editorconfig
@@ -175,8 +180,4 @@ D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\obj\Debug\
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\obj\Debug\net8.0\AppointmentBookingSystem.Web.pdb
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\obj\Debug\net8.0\AppointmentBookingSystem.Web.genruntimeconfig.cache
 D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\obj\Debug\net8.0\ref\AppointmentBookingSystem.Web.dll
-D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
-D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
-D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\AppointmentBookingSystem.Infrastructure.dll
-D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\bin\Debug\net8.0\AppointmentBookingSystem.Infrastructure.pdb
+D:\Study\AspNet\AppointmentBookingSystem\AppointmentBookingSystem.Web\obj\Debug\net8.0\AppointmentBookingSystem.Web.MvcApplicationPartsAssemblyInfo.cs

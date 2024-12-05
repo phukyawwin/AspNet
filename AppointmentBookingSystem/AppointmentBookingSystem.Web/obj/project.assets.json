@@ -2913,7 +2913,10 @@
         },
         "runtime": {
           "bin/placeholder/AppointmentBookingSystem.Domain.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "AppointmentBookingSystem.Infrastructure/1.0.0": {
         "type": "project",

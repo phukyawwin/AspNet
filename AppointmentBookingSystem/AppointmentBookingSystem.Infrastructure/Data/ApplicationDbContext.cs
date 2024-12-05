@@ -13,13 +13,15 @@ namespace AppointmentBookingSystem.Infrastructure.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
         }
-        public DbSet<Specialty> Specialties { get; set; }
+        public DbSet<Specialty> Specialty { get; set; }
+        public DbSet<Doctor> Doctor { get; set; }
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<Specialty>()
-        //        .Property(s => s.Id)
-        //        .ValueGeneratedOnAdd();
-        //}
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Specialty>()
+                .Property(s => s.Id)
+                .ValueGeneratedOnAdd();
+        }
     }
 }
