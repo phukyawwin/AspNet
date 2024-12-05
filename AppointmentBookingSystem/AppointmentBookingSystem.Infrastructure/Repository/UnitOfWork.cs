@@ -14,13 +14,14 @@ namespace AppointmentBookingSystem.Infrastructure.Repository
     {
         public ISpecialtyRepository SpecialtyRepository {get; private set;}
         public IDoctorRepository DoctorRepository { get; private set; }
+        public ISlotRepository SlotRepository { get; private set; }
         private readonly ApplicationDbContext _db;
         public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
             SpecialtyRepository = new SpecialtyRepository(_db);
             DoctorRepository = new DoctorRepository(_db);
-
+            SlotRepository=new SlotRepository(_db);
         }
 
         public void Save()

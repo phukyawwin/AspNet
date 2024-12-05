@@ -1,0 +1,70 @@
+﻿@model AppointmentBookingSystem.Web.ViewModels.SlotVM
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-success bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Update Doctor</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body border p-4">
+        <form method="post" class="row">
+            <input asp-for="Slot.Id" hidden />
+            <div class="p-3">
+
+                <div class="form-floating py-1 col-12">
+                    <select disabled asp-for="@Model.Slot.DoctorId" asp-items="@Model.DoctorList"
+                            class="form-select border shadow">
+                        <option disabled selected>--Select Doctor--</option>
+                    </select>
+                    <label asp-for="Slot.DoctorId" class="ms-2"></label>
+                    <span asp-validation-for="Slot.DoctorId" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-1 col-12">
+                    <select disabled asp-for="Slot.DayOfWeek" class="form-control">
+                        @foreach (var day in Enum.GetValues(typeof(DayOfWeek)).Cast<DayOfWeek>())
+                        {
+                            <option value="@day">@day</option>
+                        }
+                    </select>
+                    <label asp-for="Slot.DayOfWeek" class="ms-2"></label>
+                    <span asp-validation-for="Slot.DayOfWeek" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-1 col-12">
+                    <input asp-for="Slot.StartTime" disabled class="form-control border shadow" type="time" />
+                    <label asp-for="Slot.StartTime" class="ms-2"></label>
+                    <span asp-validation-for="Slot.StartTime" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-1 col-12">
+                    <input asp-for="Slot.EndTime" disabled class="form-control border shadow" type="time" />
+                    <label asp-for="Slot.EndTime" class="ms-2"></label>
+                    <span asp-validation-for="Slot.EndTime" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-1 col-12">
+                    <input asp-for="Slot.MaxPatients" disabled class="form-control border shadow" />
+                    <label asp-for="Slot.MaxPatients" class="ms-2"></label>
+                    <span asp-validation-for="Slot.MaxPatients" class="text-danger"></span>
+                </div>
+                <div class="row pt-2">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-danger w-100">
+                            <i class="bi bi-check-circle"></i> Delete
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Slot" asp-action="Index" class="btn btn-secondary w-100">
+                            <i class="bi bi-x-circle"></i> Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

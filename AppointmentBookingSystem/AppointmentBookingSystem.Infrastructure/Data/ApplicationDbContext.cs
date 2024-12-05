@@ -15,7 +15,7 @@ namespace AppointmentBookingSystem.Infrastructure.Data
         }
         public DbSet<Specialty> Specialty { get; set; }
         public DbSet<Doctor> Doctor { get; set; }
-
+        public DbSet<Slot> Slot { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

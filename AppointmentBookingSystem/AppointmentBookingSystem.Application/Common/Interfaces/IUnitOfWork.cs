@@ -10,6 +10,7 @@ namespace AppointmentBookingSystem.Application.Common.Interfaces
     {
         ISpecialtyRepository SpecialtyRepository { get; }
         IDoctorRepository DoctorRepository { get; }
+        ISlotRepository SlotRepository { get; }
         void Save();
     }
 }

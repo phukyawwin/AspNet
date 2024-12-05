@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace AppointmentBookingSystem.Domain.Entities
 {
@@ -13,11 +14,13 @@ namespace AppointmentBookingSystem.Domain.Entities
         [Key]
         public int Id { get; set; }
 
+        [Display(Name = "Doctor Name")]
         // Foreign key for Doctor
         [ForeignKey("Doctor")]
         public int DoctorId { get; set; }
 
         // Navigation property to Doctor
+        [ValidateNever]
         public Doctor Doctor { get; set; }
 
         // Day of the week (e.g., Monday, Tuesday, etc.)

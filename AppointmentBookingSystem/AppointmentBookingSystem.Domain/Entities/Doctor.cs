@@ -20,6 +20,7 @@ namespace AppointmentBookingSystem.Domain.Entities
         public string Name { get; set; }
 
         // Foreign key for Specialty
+        [Display(Name = "Specialty")]
         [ForeignKey("SpecialtyDetails")]
         public int SpecialtyId { get; set; } // This is the foreign key property
 

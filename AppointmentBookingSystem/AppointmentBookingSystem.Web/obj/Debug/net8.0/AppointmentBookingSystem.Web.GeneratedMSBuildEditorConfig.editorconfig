@@ -60,6 +60,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Study/AspNet/AppointmentBookingSystem/AppointmentBookingSystem.Web/Views/Slot/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xvdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Study/AspNet/AppointmentBookingSystem/AppointmentBookingSystem.Web/Views/Slot/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xvdFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Study/AspNet/AppointmentBookingSystem/AppointmentBookingSystem.Web/Views/Slot/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xvdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Study/AspNet/AppointmentBookingSystem/AppointmentBookingSystem.Web/Views/Slot/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2xvdFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Study/AspNet/AppointmentBookingSystem/AppointmentBookingSystem.Web/Views/Specialty/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BlY2lhbHR5XENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
