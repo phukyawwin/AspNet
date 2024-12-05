@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OvR5SbAvGR0DL04+VOWNn1Isf7iSc/2FjSzW70BFZ4w=",
+  "Hash": "LOS5sjLQv9Iu8/9SWyP0y7fYUWVXXm7aHnFuJfkj/Us=",
   "Source": "AppointmentBookingSystem.Web",
   "BasePath": "_content/AppointmentBookingSystem.Web",
   "Mode": "Default",
@@ -31,8 +31,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
-      "Fingerprint": "jpy2ufp88h",
-      "Integrity": "ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM=",
+      "Fingerprint": "rsgx98wx5n",
+      "Integrity": "S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppointmentBookingSystem.Web.styles.css"
@@ -52,11 +52,32 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
-      "Fingerprint": "jpy2ufp88h",
-      "Integrity": "ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM=",
+      "Fingerprint": "rsgx98wx5n",
+      "Integrity": "S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppointmentBookingSystem.Web.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\css\\account.css",
+      "SourceId": "AppointmentBookingSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\",
+      "BasePath": "_content/AppointmentBookingSystem.Web",
+      "RelativePath": "css/account#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "4tydxihf6v",
+      "Integrity": "eApvHoEU+74ckhtleEFU0MqbEberiC+rDn9uRJl1QeY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\account.css"
     },
     {
       "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\css\\site.css",
@@ -80,6 +101,27 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\css\\spinner.css",
+      "SourceId": "AppointmentBookingSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\",
+      "BasePath": "_content/AppointmentBookingSystem.Web",
+      "RelativePath": "css/spinner#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0r12nxbd6y",
+      "Integrity": "XABLypAMNwg2J4qsziFthz6D8Zd8WHDBejgHbOMaD8Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\spinner.css"
+    },
+    {
       "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\favicon.ico",
       "SourceId": "AppointmentBookingSystem.Web",
       "SourceType": "Discovered",
@@ -99,6 +141,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\accessDenied.jpg",
+      "SourceId": "AppointmentBookingSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\",
+      "BasePath": "_content/AppointmentBookingSystem.Web",
+      "RelativePath": "images/accessDenied#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "gcx3mt1vch",
+      "Integrity": "cPprUC+w4A3F78yt7UYci7kxT2cqycDLFtPlEnZKOr8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\accessDenied.jpg"
+    },
+    {
+      "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\notfound.jpg",
+      "SourceId": "AppointmentBookingSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\",
+      "BasePath": "_content/AppointmentBookingSystem.Web",
+      "RelativePath": "images/notfound#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yr5csw7j4r",
+      "Integrity": "wguNe3pdoVK6TaHD3Sk9CvYKuDPd8DrM4GXmTfXZVmA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\notfound.jpg"
+    },
+    {
+      "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\resort.png",
+      "SourceId": "AppointmentBookingSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\",
+      "BasePath": "_content/AppointmentBookingSystem.Web",
+      "RelativePath": "images/resort#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "igwelnqde9",
+      "Integrity": "LpOjl8+3WUeTwZ67sonFnvYqpe/KIoLUGDI5KrxR3Wk=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\resort.png"
     },
     {
       "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.js",
@@ -1436,7 +1541,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2148"
+          "Value": "2067"
         },
         {
           "Name": "Content-Type",
@@ -1444,11 +1549,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM=\""
+          "Value": "\"S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 13:21:58 GMT"
+          "Value": "Thu, 05 Dec 2024 18:09:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1458,12 +1563,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM="
+          "Value": "sha256-S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM="
         }
       ]
     },
     {
-      "Route": "AppointmentBookingSystem.Web.jpy2ufp88h.bundle.scp.css",
+      "Route": "AppointmentBookingSystem.Web.rsgx98wx5n.bundle.scp.css",
       "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppointmentBookingSystem.Web.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1473,7 +1578,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2148"
+          "Value": "2067"
         },
         {
           "Name": "Content-Type",
@@ -1481,11 +1586,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM=\""
+          "Value": "\"S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 13:21:58 GMT"
+          "Value": "Thu, 05 Dec 2024 18:09:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1495,7 +1600,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jpy2ufp88h"
+          "Value": "rsgx98wx5n"
         },
         {
           "Name": "label",
@@ -1503,12 +1608,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM="
+          "Value": "sha256-S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM="
         }
       ]
     },
     {
-      "Route": "AppointmentBookingSystem.Web.jpy2ufp88h.styles.css",
+      "Route": "AppointmentBookingSystem.Web.rsgx98wx5n.styles.css",
       "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\obj\\Debug\\net8.0\\scopedcss\\bundle\\AppointmentBookingSystem.Web.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1518,7 +1623,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2148"
+          "Value": "2067"
         },
         {
           "Name": "Content-Type",
@@ -1526,11 +1631,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM=\""
+          "Value": "\"S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 13:21:58 GMT"
+          "Value": "Thu, 05 Dec 2024 18:09:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1540,7 +1645,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "jpy2ufp88h"
+          "Value": "rsgx98wx5n"
         },
         {
           "Name": "label",
@@ -1548,7 +1653,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM="
+          "Value": "sha256-S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM="
         }
       ]
     },
@@ -1563,7 +1668,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2148"
+          "Value": "2067"
         },
         {
           "Name": "Content-Type",
@@ -1571,11 +1676,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM=\""
+          "Value": "\"S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 13:21:58 GMT"
+          "Value": "Thu, 05 Dec 2024 18:09:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1585,7 +1690,89 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM="
+          "Value": "sha256-S9zsffHTyPhbFdY1zVGNZ1wpcUDNa0hE4dO+0oyWuQM="
+        }
+      ]
+    },
+    {
+      "Route": "css/account.4tydxihf6v.css",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\css\\account.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eApvHoEU+74ckhtleEFU0MqbEberiC+rDn9uRJl1QeY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Dec 2024 17:43:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "4tydxihf6v"
+        },
+        {
+          "Name": "label",
+          "Value": "css/account.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-eApvHoEU+74ckhtleEFU0MqbEberiC+rDn9uRJl1QeY="
+        }
+      ]
+    },
+    {
+      "Route": "css/account.css",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\css\\account.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "484"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"eApvHoEU+74ckhtleEFU0MqbEberiC+rDn9uRJl1QeY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Dec 2024 17:43:02 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-eApvHoEU+74ckhtleEFU0MqbEberiC+rDn9uRJl1QeY="
         }
       ]
     },
@@ -1672,6 +1859,88 @@
       ]
     },
     {
+      "Route": "css/spinner.0r12nxbd6y.css",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\css\\spinner.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2984"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XABLypAMNwg2J4qsziFthz6D8Zd8WHDBejgHbOMaD8Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 16:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0r12nxbd6y"
+        },
+        {
+          "Name": "label",
+          "Value": "css/spinner.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XABLypAMNwg2J4qsziFthz6D8Zd8WHDBejgHbOMaD8Y="
+        }
+      ]
+    },
+    {
+      "Route": "css/spinner.css",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\css\\spinner.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2984"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XABLypAMNwg2J4qsziFthz6D8Zd8WHDBejgHbOMaD8Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 16:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-XABLypAMNwg2J4qsziFthz6D8Zd8WHDBejgHbOMaD8Y="
+        }
+      ]
+    },
+    {
       "Route": "favicon.61n19gt1b8.ico",
       "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\favicon.ico",
       "Selectors": [],
@@ -1750,6 +2019,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+        }
+      ]
+    },
+    {
+      "Route": "images/accessDenied.gcx3mt1vch.jpg",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\accessDenied.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449798"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cPprUC+w4A3F78yt7UYci7kxT2cqycDLFtPlEnZKOr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 16:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "gcx3mt1vch"
+        },
+        {
+          "Name": "label",
+          "Value": "images/accessDenied.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-cPprUC+w4A3F78yt7UYci7kxT2cqycDLFtPlEnZKOr8="
+        }
+      ]
+    },
+    {
+      "Route": "images/accessDenied.jpg",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\accessDenied.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "449798"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"cPprUC+w4A3F78yt7UYci7kxT2cqycDLFtPlEnZKOr8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 16:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-cPprUC+w4A3F78yt7UYci7kxT2cqycDLFtPlEnZKOr8="
+        }
+      ]
+    },
+    {
+      "Route": "images/notfound.jpg",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\notfound.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "384291"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wguNe3pdoVK6TaHD3Sk9CvYKuDPd8DrM4GXmTfXZVmA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 16:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-wguNe3pdoVK6TaHD3Sk9CvYKuDPd8DrM4GXmTfXZVmA="
+        }
+      ]
+    },
+    {
+      "Route": "images/notfound.yr5csw7j4r.jpg",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\notfound.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "384291"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"wguNe3pdoVK6TaHD3Sk9CvYKuDPd8DrM4GXmTfXZVmA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 16:12:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yr5csw7j4r"
+        },
+        {
+          "Name": "label",
+          "Value": "images/notfound.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-wguNe3pdoVK6TaHD3Sk9CvYKuDPd8DrM4GXmTfXZVmA="
+        }
+      ]
+    },
+    {
+      "Route": "images/resort.igwelnqde9.png",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\resort.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36961"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LpOjl8+3WUeTwZ67sonFnvYqpe/KIoLUGDI5KrxR3Wk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 16:12:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "igwelnqde9"
+        },
+        {
+          "Name": "label",
+          "Value": "images/resort.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LpOjl8+3WUeTwZ67sonFnvYqpe/KIoLUGDI5KrxR3Wk="
+        }
+      ]
+    },
+    {
+      "Route": "images/resort.png",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\resort.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "36961"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LpOjl8+3WUeTwZ67sonFnvYqpe/KIoLUGDI5KrxR3Wk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 04 Dec 2024 16:12:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LpOjl8+3WUeTwZ67sonFnvYqpe/KIoLUGDI5KrxR3Wk="
         }
       ]
     },

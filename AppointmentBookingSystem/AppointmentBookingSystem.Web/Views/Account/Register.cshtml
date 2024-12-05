@@ -1,5 +1,8 @@
 ﻿@model AppointmentBookingSystem.Web.ViewModels.RegisterVM
-
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
 <div class="container pt-5">
     <div class="card shadow border ">
         <div class="card-header bg-success bg-gradient ml-0 py-4">
@@ -48,6 +51,13 @@
                         </div>
                         <div class="col-12">
                             <button type="submit" class="w-100 btn btn-lg btn-outline-success">Register</button>
+                        </div>
+                        <div class="d-flex justify-content-between pt-2">
+
+                            <p class="text-center mt-2">
+                                <a asp-controller="Home" asp-action="Index" class="text-decoration-none">Back to Login</a>
+                            </p>
+                      
                         </div>
                     </form>
                 </div>

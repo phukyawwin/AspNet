@@ -1,5 +1,8 @@
 ﻿@model AppointmentBookingSystem.Web.ViewModels.LoginVM
-
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
 <div class="container pt-5">
     <div class="card shadow border">
         <div class="card-header bg-success bg-gradient ml-0 py-4">
@@ -37,10 +40,13 @@
                                 <button type="submit" class="w-100 btn btn-lg btn-outline-success">Log in</button>
                             </div>
                             <div class="d-flex justify-content-between pt-2">
-                               
-                                <p>
-                                    <a asp-action="Register" asp-route-returnUrl="@Model.RedirectUrl">Register as a new user</a>
+
+                                <p class="text-center mt-2">
+                                    Don't have an account? <a asp-controller="Account" asp-action="Register" class="text-decoration-none">Register</a>
                                 </p>
+                                @* <p> *@
+                                @*     <a asp-action="Register" asp-route-returnUrl="@Model.RedirectUrl">Register as a new user</a> *@
+                                @* </p> *@
                             </div>
                         </form>
                     </section>

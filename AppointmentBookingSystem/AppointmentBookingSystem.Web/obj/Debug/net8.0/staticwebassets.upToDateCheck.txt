@@ -1,5 +1,10 @@
+wwwroot\css\account.css
 wwwroot\css\site.css
+wwwroot\css\spinner.css
 wwwroot\favicon.ico
+wwwroot\images\accessDenied.jpg
+wwwroot\images\notfound.jpg
+wwwroot\images\resort.png
 wwwroot\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.js
 wwwroot\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.min.js
 wwwroot\jquery-ajax-unobtrusive\license.txt
