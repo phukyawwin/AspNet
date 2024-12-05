@@ -1,22 +1,22 @@
 ﻿<Project>
   <ItemGroup>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AppointmentBookingSystem.Web.ow5fwu9xnn.bundle.scp.css'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AppointmentBookingSystem.Web.jpy2ufp88h.bundle.scp.css'))">
       <SourceType>Package</SourceType>
       <SourceId>AppointmentBookingSystem.Web</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/AppointmentBookingSystem.Web</BasePath>
-      <RelativePath>AppointmentBookingSystem.Web.ow5fwu9xnn.bundle.scp.css</RelativePath>
+      <RelativePath>AppointmentBookingSystem.Web.jpy2ufp88h.bundle.scp.css</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>Reference</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName>ScopedCss</AssetTraitName>
       <AssetTraitValue>ProjectBundle</AssetTraitValue>
-      <Fingerprint>ow5fwu9xnn</Fingerprint>
-      <Integrity>WAzRgVDBq52r6SNQVJcCPQMI3wTVSUHrneuJiue5FfU=</Integrity>
+      <Fingerprint>jpy2ufp88h</Fingerprint>
+      <Integrity>ydmmZmLQ2WHXRQGVFudG4Hi3Nr++6FtoGdqkbvTI8LM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AppointmentBookingSystem.Web.ow5fwu9xnn.bundle.scp.css'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AppointmentBookingSystem.Web.jpy2ufp88h.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))">
       <SourceType>Package</SourceType>
@@ -53,6 +53,96 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AppointmentBookingSystem.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AppointmentBookingSystem.Web</BasePath>
+      <RelativePath>jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vs3qwh9hx3</Fingerprint>
+      <Integrity>v2nySZafnswY87um3ymbg7p9f766IQspC5oqaqZVX2c=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.min.js'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AppointmentBookingSystem.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AppointmentBookingSystem.Web</BasePath>
+      <RelativePath>jquery-ajax-unobtrusive/dist/jquery.unobtrusive-ajax.min.js</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8ve2wm9mbw</Fingerprint>
+      <Integrity>PAC000yuHt78nszJ2RO0OiDMu/uLzPLRlYTk8J3AO10=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.min.js'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\license.txt'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AppointmentBookingSystem.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AppointmentBookingSystem.Web</BasePath>
+      <RelativePath>jquery-ajax-unobtrusive/license.txt</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ybw6mie03a</Fingerprint>
+      <Integrity>0tgJzD2bT6bc3CduB5h+3zFmOIDZgVXefaDijR/YKsY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\license.txt'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\package.json'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AppointmentBookingSystem.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AppointmentBookingSystem.Web</BasePath>
+      <RelativePath>jquery-ajax-unobtrusive/package.json</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fjuxqxgzow</Fingerprint>
+      <Integrity>JakycwsjHAePrRXcimP7IgK/95bLWwy02NjGlse2fFI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\package.json'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\readme.md'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AppointmentBookingSystem.Web</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AppointmentBookingSystem.Web</BasePath>
+      <RelativePath>jquery-ajax-unobtrusive/readme.md</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>89ayarveqi</Fingerprint>
+      <Integrity>lJFLUQij0u6J+Bf3UQHOpaH2U7IEdb74sLXfQHRfH8k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\jquery-ajax-unobtrusive\readme.md'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))">
       <SourceType>Package</SourceType>

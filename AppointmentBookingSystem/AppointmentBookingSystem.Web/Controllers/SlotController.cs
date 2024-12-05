@@ -1,11 +1,13 @@
 ﻿using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Web.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AppointmentBookingSystem.Web.Controllers
 {
+    [Authorize]
     public class SlotController : Controller
     {
         private readonly ISlotService _slotService;

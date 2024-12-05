@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\AppointmentBookingSystem.Web.bundle.scp.css",
-      "PackagePath": "staticwebassets\\AppointmentBookingSystem.Web.ow5fwu9xnn.bundle.scp.css"
+      "PackagePath": "staticwebassets\\AppointmentBookingSystem.Web.jpy2ufp88h.bundle.scp.css"
     },
     {
       "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\css\\site.css",
@@ -11,6 +11,26 @@
     {
       "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.js",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.js"
+    },
+    {
+      "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.min.js",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\dist\\jquery.unobtrusive-ajax.min.js"
+    },
+    {
+      "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\jquery-ajax-unobtrusive\\license.txt",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\license.txt"
+    },
+    {
+      "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\jquery-ajax-unobtrusive\\package.json",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\package.json"
+    },
+    {
+      "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\jquery-ajax-unobtrusive\\readme.md",
+      "PackagePath": "staticwebassets\\jquery-ajax-unobtrusive\\readme.md"
     },
     {
       "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\js\\site.js",

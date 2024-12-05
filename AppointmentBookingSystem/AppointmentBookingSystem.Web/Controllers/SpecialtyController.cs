@@ -1,9 +1,11 @@
 ﻿using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AppointmentBookingSystem.Web.Controllers
 {
+    [Authorize]
     public class SpecialtyController : Controller
     {
         private readonly ISpecialtyService _specialtyService;
