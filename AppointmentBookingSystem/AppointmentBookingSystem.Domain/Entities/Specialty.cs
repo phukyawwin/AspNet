@@ -16,7 +16,7 @@ namespace AppointmentBookingSystem.Domain.Entities
         public string? Description { get; set; }
         public string Code { get; set; }
         public bool IsActive { get; set; } = true;
-        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
+        public DateTime UpdatedDate { get; set; } = DateTime.Now;
     }
 }

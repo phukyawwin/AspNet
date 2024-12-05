@@ -35,9 +35,9 @@ namespace AppointmentBookingSystem.Domain.Entities
         public bool IsActive { get; set; } = true;
 
         // Date when the record was created
-        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedDate { get; set; } = DateTime.Now;
 
         // Date when the record was last updated
-        public DateTime UpdatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedDate { get; set; } = DateTime.Now;
     }
 }

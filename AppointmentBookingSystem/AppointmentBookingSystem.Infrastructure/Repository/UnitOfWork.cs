@@ -35,10 +35,10 @@ namespace AppointmentBookingSystem.Infrastructure.Repository
 
                 if (entry.State == EntityState.Added)
                 {
-                    timestampedEntity.CreatedDate = DateTime.UtcNow; // Set CreatedDate for new entries
+                    timestampedEntity.CreatedDate = DateTime.Now; // Set CreatedDate for new entries
                 }
 
-                timestampedEntity.UpdatedDate = DateTime.UtcNow; // Always update UpdatedDate
+                timestampedEntity.UpdatedDate = DateTime.Now; // Always update UpdatedDate
             }
             _db.SaveChanges();
         }
