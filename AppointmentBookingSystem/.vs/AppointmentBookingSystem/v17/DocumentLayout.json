@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Study\\AspNet\\AppointmentBookingSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\views\\shared\\_layoutadmin.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_LayoutAdmin.cshtml",
+              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeDocumentMoniker": "AppointmentBookingSystem.Web\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "RelativeToolTip": "AppointmentBookingSystem.Web\\Views\\Shared\\_LayoutAdmin.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAIwDMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T19:06:07.66Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AppointmentBookingSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AppointmentBookingSystem.Web\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAIwE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T19:05:52.105Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
