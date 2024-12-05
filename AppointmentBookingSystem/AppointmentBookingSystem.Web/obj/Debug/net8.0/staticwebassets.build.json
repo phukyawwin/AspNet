@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LOS5sjLQv9Iu8/9SWyP0y7fYUWVXXm7aHnFuJfkj/Us=",
+  "Hash": "k+epoSg+b1w7621qEIPb68Qo5myTodWntcKRlRk++A4=",
   "Source": "AppointmentBookingSystem.Web",
   "BasePath": "_content/AppointmentBookingSystem.Web",
   "Mode": "Default",
@@ -162,6 +162,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\accessDenied.jpg"
+    },
+    {
+      "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\account-bg.jpg",
+      "SourceId": "AppointmentBookingSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\",
+      "BasePath": "_content/AppointmentBookingSystem.Web",
+      "RelativePath": "images/account-bg#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "g5h59swcex",
+      "Integrity": "7IC80VLM0VWWpY5LkdnXUkSaosyxbMES/bf75K3kGJM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\account-bg.jpg"
     },
     {
       "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\notfound.jpg",
@@ -1553,7 +1574,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 18:09:22 GMT"
+          "Value": "Thu, 05 Dec 2024 19:00:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1590,7 +1611,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 18:09:22 GMT"
+          "Value": "Thu, 05 Dec 2024 19:00:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1635,7 +1656,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 18:09:22 GMT"
+          "Value": "Thu, 05 Dec 2024 19:00:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1680,7 +1701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 18:09:22 GMT"
+          "Value": "Thu, 05 Dec 2024 19:00:23 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2101,6 +2122,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-cPprUC+w4A3F78yt7UYci7kxT2cqycDLFtPlEnZKOr8="
+        }
+      ]
+    },
+    {
+      "Route": "images/account-bg.g5h59swcex.jpg",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\account-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73239"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7IC80VLM0VWWpY5LkdnXUkSaosyxbMES/bf75K3kGJM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Dec 2024 18:58:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "g5h59swcex"
+        },
+        {
+          "Name": "label",
+          "Value": "images/account-bg.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7IC80VLM0VWWpY5LkdnXUkSaosyxbMES/bf75K3kGJM="
+        }
+      ]
+    },
+    {
+      "Route": "images/account-bg.jpg",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\account-bg.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "73239"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7IC80VLM0VWWpY5LkdnXUkSaosyxbMES/bf75K3kGJM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 05 Dec 2024 18:58:53 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7IC80VLM0VWWpY5LkdnXUkSaosyxbMES/bf75K3kGJM="
         }
       ]
     },

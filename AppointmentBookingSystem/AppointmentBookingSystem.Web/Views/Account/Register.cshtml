@@ -3,70 +3,54 @@
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_AccountLayout.cshtml";
 }
-<div class="container pt-5">
-    <div class="card shadow border ">
-        <div class="card-header bg-success bg-gradient ml-0 py-4">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <h2 class="py-2 text-white">Register</h2>
-                </div>
+<div class="account-container">
+    <div class="account-box">
+        <h2 class="text-center mb-4">Register</h2>
+        <form asp-action="Register" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-        </div>
-        <div class="card-body p-4">
-            <div class="row pt-3">
-                <div class="col-md-12">
-                    <form class="row" method="post">
-                        <input asp-for="RedirectUrl" hidden />
-                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                        <div class="form-floating mb-3 col-md-12">
-                            <input asp-for="Email" class="form-control" aria-required="true" />
-                            <label asp-for="Email" class="ms-2 text-muted"></label>
-                            <span asp-validation-for="Email" class="text-danger"/>
-                        </div>
-                        <div class="form-floating mb-3 col-md-6">
-                            <input asp-for="Name" class="form-control" />
-                            <label asp-for="Name" class="ms-2 text-muted"></label>
-                            <span asp-validation-for="Name" class="text-danger" />
-                        </div>
-                        <div class="form-floating mb-3 col-md-6">
-                            <input asp-for="PhoneNumber" class="form-control" />
-                            <label asp-for="PhoneNumber" class="ms-2 text-muted"></label>
-                            <span asp-validation-for="PhoneNumber" class="text-danger" />
-                        </div>
-                        <div class="form-floating mb-3 col-md-6">
-                            <input asp-for="Password" class="form-control" />
-                            <label asp-for="Password" class="ms-2 text-muted"></label>
-                            <span asp-validation-for="Password" class="text-danger" />
-                        </div>
-                        <div class="form-floating mb-3 col-md-6">
-                            <input asp-for="ConfirmPassword" class="form-control" />
-                            <label asp-for="ConfirmPassword" class="ms-2 text-muted">Confirm Password</label>
-                            <span asp-validation-for="ConfirmPassword" class="text-danger" />
-                        </div>
-
-                        <div class="form-floating mb-3 col-md-6">
-                            <select asp-for="Role" asp-items="@Model.RoleList" class="form-select">
-                                <option disabled selected>-Select Role-</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="w-100 btn btn-lg btn-outline-success">Register</button>
-                        </div>
-                        <div class="d-flex justify-content-between pt-2">
-
-                            <p class="text-center mt-2">
-                                <a asp-controller="Home" asp-action="Index" class="text-decoration-none">Back to Login</a>
-                            </p>
-                      
-                        </div>
-                    </form>
-                </div>
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-        </div>
+            <div class="mb-3">
+                <label asp-for="PhoneNumber" class="form-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="ConfirmPassword" class="form-label"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <select asp-for="Role" asp-items="@Model.RoleList" class="form-select">
+                    <option disabled selected>-Select Role-</option>
+                </select>
+            </div>
+            <input type="submit" value="Register" class="btn btn-success w-100 p-2" />
+            <p class="text-center mt-2">
+                Already have an account? <a asp-controller="Account" asp-action="Login" class="text-decoration-none">Login</a>
+            </p>
+            <div class="text-center">
+                <a asp-controller="Home" asp-action="Index" class="text-decoration-none mt-3">Back</a>
+            </div>
+        </form>
     </div>
-
 </div>
 
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial.cshtml");
+    }
 }

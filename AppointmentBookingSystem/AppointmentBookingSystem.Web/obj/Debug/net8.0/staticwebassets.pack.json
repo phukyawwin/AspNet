@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\accessDenied.jpg"
     },
     {
+      "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\account-bg.jpg",
+      "PackagePath": "staticwebassets\\images\\account-bg.jpg"
+    },
+    {
       "Id": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\images\\notfound.jpg",
       "PackagePath": "staticwebassets\\images\\notfound.jpg"
     },
