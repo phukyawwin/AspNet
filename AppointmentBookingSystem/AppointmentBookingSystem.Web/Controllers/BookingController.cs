@@ -1,4 +1,5 @@
 ﻿using AppointmentBookingSystem.Application.Common.Utility;
+using AppointmentBookingSystem.Application.Services.Implementation;
 using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Web.ViewModels;
@@ -15,13 +16,15 @@ namespace AppointmentBookingSystem.Web.Controllers
         private readonly IBookingService _bookingService;
         private readonly ISpecialtyService _specialtyService;
         private readonly UserManager<ApplicationUser> _userManager;
+        private readonly ISlotService _slotService;
 
-        public BookingController(IBookingService bookingService, ISpecialtyService specialtyService, UserManager<ApplicationUser> userManager)
+        public BookingController(IBookingService bookingService, ISpecialtyService specialtyService, UserManager<ApplicationUser> userManager, ISlotService slotService)
         {
 
             _bookingService = bookingService;
             _specialtyService = specialtyService;
             _userManager = userManager;
+            _slotService = slotService;
         }
 
 
@@ -85,9 +88,25 @@ namespace AppointmentBookingSystem.Web.Controllers
 
             if (ModelState.IsValid && !slotExists)
             {
-                _bookingService.CreateBooking(obj.Booking);
-                TempData["success"] = "The Booking has been created successfully.";
-                return RedirectToAction(nameof(IndexAsync));
+                
+                var slot = _slotService.GetSlotById(obj.Booking.SlotId);
+                if (!_bookingService.checkBookingExitByCustomer(obj.Booking))
+                {
+                    if (_bookingService.getBookingCountOnDate(obj.Booking) <= slot.MaxPatients)
+                    {
+                        _bookingService.CreateBooking(obj.Booking);
+                        TempData["success"] = "The Booking has been created successfully.";
+                        return RedirectToAction(nameof(Index));
+                    }
+                    else
+                    {
+                        TempData["error"] = "Booking limit for the selected date has been reached.";
+                    }
+                }
+                else
+                {
+                    TempData["error"] = "You have already made a booking for this slot.";
+                }
             }
 
             if (slotExists)

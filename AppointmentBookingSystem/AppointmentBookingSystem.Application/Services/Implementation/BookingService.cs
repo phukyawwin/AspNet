@@ -26,7 +26,7 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
         public void CreateBooking(Booking booking)
         {
             _unitOfWork.BookingRepository.Add(booking);
-            _unitOfWork.Save();
+            _unitOfWork.Save();     
         }
 
         public bool DeleteBooking(int id)
@@ -47,6 +47,12 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
                 return false;
             }
         }
+        public bool checkBookingExitByCustomer(Booking booking)
+        {
+            Booking existBooking=_unitOfWork.BookingRepository.Get(u => u.Status == "Confirmed" && u.SlotId == booking.SlotId &&
+             u.CustomerId == booking.CustomerId && u.AppointmentDate==booking.AppointmentDate);
+            return existBooking is not null;
+        }
         public IEnumerable<Booking> GetAllBooking()
         {
             return _unitOfWork.BookingRepository.GetAll( includeProperties: "Customer,Slot.Doctor.SpecialtyDetails");
@@ -64,6 +70,12 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
         {
             _unitOfWork.BookingRepository.Update(booking);
             _unitOfWork.Save();
+        }
+
+        public int getBookingCountOnDate(Booking booking)
+        {
+           return _unitOfWork.BookingRepository.GetAll(u => u.Status == "Confirmed" && u.SlotId == booking.SlotId &&
+             u.AppointmentDate == booking.AppointmentDate).Count();
         }
     }
 }

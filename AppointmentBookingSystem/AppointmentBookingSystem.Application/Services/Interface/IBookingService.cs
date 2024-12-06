@@ -12,6 +12,9 @@ namespace AppointmentBookingSystem.Application.Services.Interface
         IEnumerable<Booking> GetAllBooking();
         IEnumerable<Booking> GetAllBookingByCustomer(string id);
         Booking GetBookingById(int id);
+
+        bool checkBookingExitByCustomer(Booking booking);
+        int getBookingCountOnDate(Booking booking);
         void CreateBooking(Booking booking);
         void UpdateBooking(Booking booking);
         bool DeleteBooking(int id);
