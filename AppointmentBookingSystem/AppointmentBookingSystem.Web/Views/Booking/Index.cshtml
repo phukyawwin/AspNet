@@ -26,6 +26,8 @@
                     <th>Doctor Name</th>
                     <th>Specialty</th>
                     <th>Appointment Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
                     <th>Booking Date</th>
                     <th>Status</th>
                     <th></th>
@@ -38,7 +40,9 @@
                         <td>@obj.Customer.Name</td>
                         <td>@obj.Slot.Doctor.Name </td>
                         <td>@obj.Slot.Doctor.SpecialtyDetails.Name </td>
-                        <td>@obj.AppointmentDate </td>
+                        <td>@obj.AppointmentDate.ToString("yyyy-MM-dd") </td>
+                        <td>@(new DateTime(2000, 1, 1).Add(@obj.Slot.StartTime).ToString("hh:mm tt"))</td>
+                        <td>@(new DateTime(2000, 1, 1).Add(@obj.Slot.EndTime).ToString("hh:mm tt"))</td>
                         <td>@obj.BookingDate </td>
                         <td>@obj.Status </td>
                         <td>

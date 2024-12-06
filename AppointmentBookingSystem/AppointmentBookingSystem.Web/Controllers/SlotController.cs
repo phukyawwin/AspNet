@@ -146,7 +146,7 @@ namespace AppointmentBookingSystem.Web.Controllers
             }
             var slot= _slotService.GetSlotByDoctorId(doctorId).Select(u => new SelectListItem
             {
-                Text = $"{u.StartTime:hh\\:mm} - {u.EndTime:hh\\:mm}",
+                Text = $"{(new DateTime(2000, 1, 1).Add(u.StartTime)):hh:mm tt} - {(new DateTime(2000, 1, 1).Add(u.EndTime)):hh:mm tt}",
                 Value = u.Id.ToString()
             });
             return Ok(slot);
@@ -166,8 +166,6 @@ namespace AppointmentBookingSystem.Web.Controllers
                                         .ToList();
 
             return Ok(dayNames);
-
-           //return Ok(_slotService.GetSlotByDoctorId(doctorId).Select(s => s.DayOfWeek).Distinct().ToList());
 
         }
     }
