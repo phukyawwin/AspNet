@@ -1,4 +1,5 @@
-﻿using AppointmentBookingSystem.Application.Services.Interface;
+﻿using AppointmentBookingSystem.Application.Common.Utility;
+using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -24,15 +25,39 @@ namespace AppointmentBookingSystem.Web.Controllers
         }
 
 
-        public IActionResult Index()
+        public async Task<IActionResult> IndexAsync()
         {
-            var booking = _bookingService.GetAllBooking();
-            return View(booking);
+            var user = await _userManager.GetUserAsync(User);
+
+            
+            if (await _userManager.IsInRoleAsync(user, SD.Role_Admin))
+            {
+                var booking = _bookingService.GetAllBooking();
+                return View(booking);
+            }
+            else
+            {
+                var booking = _bookingService.GetAllBookingByCustomer(user.Id);
+                return View(booking);
+            }
+           
         }
 
         public async Task<IActionResult> CreateAsync()
         {
-            var customers = await _userManager.GetUsersInRoleAsync("Customer");
+            var user = await _userManager.GetUserAsync(User);
+            IEnumerable<ApplicationUser> customers;
+
+            if (await _userManager.IsInRoleAsync(user, SD.Role_Admin))
+            {
+                customers = await _userManager.GetUsersInRoleAsync("Customer");
+            }
+            else
+            {
+                customers = new List<ApplicationUser> { user };
+
+            }
+         
             BookingVM bookingVM = new()
             {
                 Specialties = _specialtyService.GetAllSpecialtys().Select(u => new SelectListItem
@@ -62,7 +87,7 @@ namespace AppointmentBookingSystem.Web.Controllers
             {
                 _bookingService.CreateBooking(obj.Booking);
                 TempData["success"] = "The Booking has been created successfully.";
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
 
             if (slotExists)
@@ -90,7 +115,7 @@ namespace AppointmentBookingSystem.Web.Controllers
             {
                 _bookingService.DeleteBooking(objFromDb.Id);
                 TempData["success"] = "The Booking has been cancle successfully.";
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(IndexAsync));
             }
             TempData["error"] = "The booking could not be cancle.";
             return View();
