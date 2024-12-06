@@ -58,6 +58,11 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
             return _unitOfWork.DoctorRepository.Get(u => u.Id == id, includeProperties: "SpecialtyDetails");
         }
 
+        public IEnumerable<Doctor> GetDoctorBySpecialtyId(int SpecialtyId)
+        {
+            return _unitOfWork.DoctorRepository.GetAll(u => u.SpecialtyId == SpecialtyId, includeProperties: "SpecialtyDetails");
+        }
+
         public void UpdateDoctor(Doctor doctor)
         {
             _unitOfWork.DoctorRepository.Update(doctor);

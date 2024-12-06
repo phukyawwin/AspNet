@@ -1,0 +1,75 @@
+﻿@model AppointmentBookingSystem.Web.ViewModels.BookingVM
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-success bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Create Booking</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body border p-4">
+        <form method="post" class="row">
+            <div class="p-3">
+                <div asp-validation-summary="All"></div>
+                <div class="form-floating py-1 col-12">
+                    <select id="customer" asp-for="@Model.Booking.CustomerId" asp-items="@Model.Customers"
+                            class="form-select border shadow">
+                        <option disabled selected>--Select Customer--</option>
+                    </select>
+                    <label asp-for="Booking.CustomerId" class="ms-2"></label>
+                    <span asp-validation-for="Booking.CustomerId" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-1 col-12">
+                    <select id="specialty" asp-for="@Model.SpecialtyId" asp-items="@Model.Specialties"
+                            class="form-select border shadow">
+                        <option disabled selected>--Select Specialty--</option>
+                    </select>
+                    <label asp-for="SpecialtyId" class="ms-2"></label>
+                    <span asp-validation-for="SpecialtyId" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-1 col-12">
+                    <select id="doctor" asp-for="@Model.DoctorId" asp-items="@Model.Doctors"
+                            class="form-select border shadow">
+                        <option disabled selected>--Select Doctor--</option>
+                    </select>
+                    <label asp-for="DoctorId" class="ms-2"></label>
+                    <span asp-validation-for="DoctorId" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-1 col-12">
+                    <input type="date" id="date" asp-for="Booking.AppointmentDate" class="form-control border shadow" />
+                    <label asp-for="Booking.AppointmentDate" class="ms-2"></label>
+                    <span asp-validation-for="Booking.AppointmentDate" class="text-danger"></span>
+                </div>
+                <div class="form-floating py-1 col-12">
+                    <select id="timeSlot" asp-for="@Model.Booking.SlotId" asp-items="@Model.SlotList"
+                            class="form-select border shadow">
+                        <option selected>--Select Slot--</option>
+                    </select>
+                    <label asp-for="Booking.SlotId" class="ms-2"></label>
+                    <span asp-validation-for="Booking.SlotId" class="text-danger"></span>
+                </div>
+
+                <div class="row pt-2">
+                    <div class="col-6 col-md-3">
+                        <button type="submit" class="btn btn-success w-100">
+                            <i class="bi bi-check-circle"></i> Create
+                        </button>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <a asp-controller="Booking" asp-action="Index" class="btn btn-secondary w-100">
+                            <i class="bi bi-x-circle"></i> Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/booking.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+}

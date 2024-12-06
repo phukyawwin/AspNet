@@ -11,6 +11,7 @@ wwwroot\jquery-ajax-unobtrusive\dist\jquery.unobtrusive-ajax.min.js
 wwwroot\jquery-ajax-unobtrusive\license.txt
 wwwroot\jquery-ajax-unobtrusive\package.json
 wwwroot\jquery-ajax-unobtrusive\readme.md
+wwwroot\js\booking.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

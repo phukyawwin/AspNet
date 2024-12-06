@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "k+epoSg+b1w7621qEIPb68Qo5myTodWntcKRlRk++A4=",
+  "Hash": "iFSZnPrX+mZI/2/ZfL2CIeGf9zupT+j109uBFSoSCt8=",
   "Source": "AppointmentBookingSystem.Web",
   "BasePath": "_content/AppointmentBookingSystem.Web",
   "Mode": "Default",
@@ -330,6 +330,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\jquery-ajax-unobtrusive\\readme.md"
+    },
+    {
+      "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\js\\booking.js",
+      "SourceId": "AppointmentBookingSystem.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\",
+      "BasePath": "_content/AppointmentBookingSystem.Web",
+      "RelativePath": "js/booking#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6zva2txer3",
+      "Integrity": "YiavAmroYuRAg83upgshUp/bLgR8hIFWzCH+Q5ejqNY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\booking.js"
     },
     {
       "Identity": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\js\\site.js",
@@ -1574,7 +1595,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 19:00:23 GMT"
+          "Value": "Fri, 06 Dec 2024 17:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1611,7 +1632,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 19:00:23 GMT"
+          "Value": "Fri, 06 Dec 2024 17:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1656,7 +1677,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 19:00:23 GMT"
+          "Value": "Fri, 06 Dec 2024 17:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1701,7 +1722,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 05 Dec 2024 19:00:23 GMT"
+          "Value": "Fri, 06 Dec 2024 17:11:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2778,6 +2799,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-lJFLUQij0u6J+Bf3UQHOpaH2U7IEdb74sLXfQHRfH8k="
+        }
+      ]
+    },
+    {
+      "Route": "js/booking.6zva2txer3.js",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\js\\booking.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YiavAmroYuRAg83upgshUp/bLgR8hIFWzCH+Q5ejqNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 17:49:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6zva2txer3"
+        },
+        {
+          "Name": "label",
+          "Value": "js/booking.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YiavAmroYuRAg83upgshUp/bLgR8hIFWzCH+Q5ejqNY="
+        }
+      ]
+    },
+    {
+      "Route": "js/booking.js",
+      "AssetFile": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\js\\booking.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4970"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YiavAmroYuRAg83upgshUp/bLgR8hIFWzCH+Q5ejqNY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 06 Dec 2024 17:49:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YiavAmroYuRAg83upgshUp/bLgR8hIFWzCH+Q5ejqNY="
         }
       ]
     },

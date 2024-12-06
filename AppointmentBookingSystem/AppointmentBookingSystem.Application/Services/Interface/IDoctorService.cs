@@ -14,7 +14,7 @@ namespace AppointmentBookingSystem.Application.Services.Interface
         void CreateDoctor(Doctor doctor);
         void UpdateDoctor(Doctor doctor);
         bool DeleteDoctor(int id);
-
+        IEnumerable<Doctor> GetDoctorBySpecialtyId(int SpecialtyId);
         bool CheckDoctorExists(int doctor_Number);
     }
 }

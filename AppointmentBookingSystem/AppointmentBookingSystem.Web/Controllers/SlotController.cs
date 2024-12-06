@@ -4,6 +4,7 @@ using AppointmentBookingSystem.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace AppointmentBookingSystem.Web.Controllers
 {
@@ -135,6 +136,39 @@ namespace AppointmentBookingSystem.Web.Controllers
             }
             TempData["error"] = "The slot could not be deleted.";
             return View();
+        }
+       
+        public IActionResult GetTimeSlots(int doctorId)
+        {
+            if (doctorId <= 0)
+            {
+                return BadRequest(new { message = "Invalid doctorId." });
+            }
+            var slot= _slotService.GetSlotByDoctorId(doctorId).Select(u => new SelectListItem
+            {
+                Text = $"{u.StartTime:hh\\:mm} - {u.EndTime:hh\\:mm}",
+                Value = u.Id.ToString()
+            });
+            return Ok(slot);
+            //return Ok(Json(_slotService.GetSlotByDoctorId(doctorId)));
+
+        }
+ 
+        public IActionResult GetAvailableDays(int doctorId)
+        {
+            var availableDays = _slotService.GetSlotByDoctorId(doctorId)
+                                    .Select(s => s.DayOfWeek)
+                                    .Distinct()
+                                    .ToList();
+
+            // Convert the integer values to day names
+            var dayNames = availableDays.Select(day => Enum.GetName(typeof(DayOfWeek), day))
+                                        .ToList();
+
+            return Ok(dayNames);
+
+           //return Ok(_slotService.GetSlotByDoctorId(doctorId).Select(s => s.DayOfWeek).Distinct().ToList());
+
         }
     }
 }

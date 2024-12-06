@@ -1,0 +1,60 @@
+﻿@model IEnumerable<AppointmentBookingSystem.Domain.Entities.Booking>
+
+<div class="w-100 card border-0 p-4">
+    <div class="card-header bg-success bg-gradient ml-0 py-3">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="text-white py-2">Booking List</h2>
+            </div>
+        </div>
+    </div>
+    <div class="card-body border p-4">
+        <div class="row pb-3">
+            <div class="col-6 offset-6 text-end">
+                <a asp-controller="Booking" asp-action="Create" class="btn btn-secondary">
+                    <i class="bi bi-plus-circle"></i> Create New Booking
+                </a>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Customer Name
+                    </th>
+                    <th>Doctor Name</th>
+                    <th>Specialty</th>
+                    <th>Appointment Date</th>
+                    <th>Booking Date</th>
+                    <th>Status</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var obj in Model)
+                {
+                    <tr>
+                        <td>@obj.Customer.Name</td>
+                        <td>@obj.Slot.Doctor.Name </td>
+                        <td>@obj.Slot.Doctor.SpecialtyDetails.Name </td>
+                        <td>@obj.AppointmentDate </td>
+                        <td>@obj.BookingDate </td>
+                        <td>
+                            <div class="w-75 btn-group" role="group">
+                                <a asp-controller="Booking" asp-action="Update" asp-route-bookingId="@obj.Id"
+                                   class="btn btn-success mx-2">
+                                    <i class="bi bi-pencil-square"></i> Edit
+                                </a>
+                                <a asp-controller="Booking" asp-action="Delete" asp-route-bookingId="@obj.Id"
+                                   class="btn btn-danger mx-2">
+                                    <i class="bi bi-trash-fill"></i> Delete
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

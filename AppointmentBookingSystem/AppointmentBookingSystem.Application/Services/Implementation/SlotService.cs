@@ -57,7 +57,10 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
         {
             return _unitOfWork.SlotRepository.Get(u => u.Id == id, includeProperties: "Doctor");
         }
-
+        public IEnumerable<Slot> GetSlotByDoctorId(int doctorId)
+        {
+            return _unitOfWork.SlotRepository.GetAll(u => u.DoctorId == doctorId, includeProperties: "Doctor");
+        }
         public void UpdateSlot(Slot slot)
         {
             _unitOfWork.SlotRepository.Update(slot);

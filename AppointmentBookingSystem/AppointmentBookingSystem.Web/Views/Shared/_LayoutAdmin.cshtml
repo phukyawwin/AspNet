@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/css/spinner.css" />
     <link rel="stylesheet" href="//cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
 </head>
 <body>
     <header>
@@ -49,7 +51,12 @@
                                 <span>Slot</span>
                             </a>
                         </li>
-
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Booking" asp-action="Index">
+                                <span class="me-2"><i class="bi bi-journal-plus"></i></span>
+                                <span>Booking</span>
+                            </a>
+                        </li>
                     </ul>
                     <div class="p-2 border rounded">
                         <div class="form-check form-switch" id="btnSwitch">
@@ -90,6 +97,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js" integrity="sha512-sH8JPhKJUeA9PWk3eOcOl8U+lfZTgtBXD41q6cO/slwxGHCxKcW45K4oPCUhHG7NMB4mbKEddVmPuTXtpbCbFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="//cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js" asp-append-version="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     @*  <script src="~/js/jquery.unobtrusive-ajax.min.js"></script> *@
 
     @await RenderSectionAsync("Scripts", required: false)

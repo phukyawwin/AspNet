@@ -1,4 +1,5 @@
-﻿using AppointmentBookingSystem.Application.Services.Interface;
+﻿using AppointmentBookingSystem.Application.Services.Implementation;
+using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
@@ -7,7 +8,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace AppointmentBookingSystem.Web.Controllers
 {
-    [Authorize]
+    
     public class DoctorController : Controller
     {
         private readonly IDoctorService _docterService;
@@ -136,6 +137,24 @@ namespace AppointmentBookingSystem.Web.Controllers
             }
             TempData["error"] = "The docter could not be deleted.";
             return View();
+        }
+        [AllowAnonymous]
+       
+        public IActionResult GetDoctorsBySpecialty(int specialtyId)
+        {
+            if (specialtyId <= 0)
+            {
+                return BadRequest(new { message = "Invalid specialtyId." });
+            }
+
+            // return Ok(Json(_docterService.GetDoctorBySpecialtyId(specialtyId)));
+
+            var specialty= _docterService.GetDoctorBySpecialtyId(specialtyId).Select(u => new SelectListItem
+            {
+                Text = u.Name,
+                Value = u.Id.ToString()
+            });
+            return Ok(specialty);
         }
     }
 }
