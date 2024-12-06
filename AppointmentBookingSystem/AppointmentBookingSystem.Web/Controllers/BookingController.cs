@@ -82,95 +82,19 @@ namespace AppointmentBookingSystem.Web.Controllers
             }).ToList();
             return View(obj);
         }
-
-        public async Task<IActionResult> UpdateAsync(int bookingId)
-        {
-            var customers = await _userManager.GetUsersInRoleAsync("Customer");
-            BookingVM bookingVM = new()
-            {
-                Specialties = _specialtyService.GetAllSpecialtys().Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                }),
-
-                Customers = customers.Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                }).ToList(),
-                Booking = _bookingService.GetBookingById(bookingId)
-            };
-            if (bookingVM.Booking == null)
-            {
-                return RedirectToAction("Error", "Home");
-            }
-            return View(bookingVM);
-        }
-
-
-        [HttpPost]
-        public async Task<IActionResult> UpdateAsync(BookingVM bookingVM)
-        {
-            
-            if (ModelState.IsValid)
-            {
-                _bookingService.UpdateBooking(bookingVM.Booking);
-                TempData["success"] = "The Booking has been updated successfully.";
-                return RedirectToAction(nameof(Index));
-            }
-            var customers = await _userManager.GetUsersInRoleAsync("Customer");
-            bookingVM.Specialties = _specialtyService.GetAllSpecialtys().Select(u => new SelectListItem
-            {
-                Text = u.Name,
-                Value = u.Id.ToString()
-            });
-            bookingVM.Customers = customers.Select(u => new SelectListItem
-            {
-                Text = u.Name,
-                Value = u.Id.ToString()
-            }).ToList();
-            return View(bookingVM);
-        }
+      
         public async Task<IActionResult> DeleteAsync(int bookingId)
         {
-            var customers = await _userManager.GetUsersInRoleAsync("Customer");
-            BookingVM bookingVM = new()
-            {
-                Specialties = _specialtyService.GetAllSpecialtys().Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                }),
-
-                Customers = customers.Select(u => new SelectListItem
-                {
-                    Text = u.Name,
-                    Value = u.Id.ToString()
-                }).ToList(),
-                Booking = _bookingService.GetBookingById(bookingId)
-            };
-            if (bookingVM.Booking == null)
-            {
-                return RedirectToAction("Error", "Home");
-            }
-            return View(bookingVM);
-        }
-
-
-
-        [HttpPost]
-        public IActionResult Delete(BookingVM bookingVM)
-        {
-            Booking? objFromDb = _bookingService.GetBookingById(bookingVM.Booking.Id);
+            Booking? objFromDb = _bookingService.GetBookingById(bookingId);
             if (objFromDb is not null)
             {
                 _bookingService.DeleteBooking(objFromDb.Id);
-                TempData["success"] = "The Booking has been deleted successfully.";
+                TempData["success"] = "The Booking has been cancle successfully.";
                 return RedirectToAction(nameof(Index));
             }
-            TempData["error"] = "The booking could not be deleted.";
+            TempData["error"] = "The booking could not be cancle.";
             return View();
+            
         }
 
         
