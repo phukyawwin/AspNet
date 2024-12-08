@@ -138,19 +138,18 @@ namespace AppointmentBookingSystem.Web.Controllers
             return View();
         }
        
-        public IActionResult GetTimeSlots(int doctorId)
+        public IActionResult GetTimeSlots(int doctorId, string date)
         {
             if (doctorId <= 0)
             {
                 return BadRequest(new { message = "Invalid doctorId." });
             }
-            var slot= _slotService.GetSlotByDoctorId(doctorId).Select(u => new SelectListItem
+            var slot= _slotService.GetSlotByDoctorIdAndDays(doctorId, date).Select(u => new SelectListItem
             {
                 Text = $"{(new DateTime(2000, 1, 1).Add(u.StartTime)):hh:mm tt} - {(new DateTime(2000, 1, 1).Add(u.EndTime)):hh:mm tt}",
                 Value = u.Id.ToString()
             });
             return Ok(slot);
-            //return Ok(Json(_slotService.GetSlotByDoctorId(doctorId)));
 
         }
  

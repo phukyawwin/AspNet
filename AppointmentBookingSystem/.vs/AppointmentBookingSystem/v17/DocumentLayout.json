@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "D:\\Study\\AspNet\\AppointmentBookingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{99DAF334-5E77-4A05-92C1-797B2F8A8BB2}|AppointmentBookingSystem.Infrastructure\\AppointmentBookingSystem.Infrastructure.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.infrastructure\\job\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99DAF334-5E77-4A05-92C1-797B2F8A8BB2}|AppointmentBookingSystem.Infrastructure\\AppointmentBookingSystem.Infrastructure.csproj|solutionrelative:appointmentbookingsystem.infrastructure\\job\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.application\\services\\implementation\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|solutionrelative:appointmentbookingsystem.application\\services\\implementation\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\wwwroot\\js\\booking.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\wwwroot\\js\\booking.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\controllers\\slotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\controllers\\slotcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.application\\services\\implementation\\slotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|solutionrelative:appointmentbookingsystem.application\\services\\implementation\\slotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.application\\services\\interface\\islotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|solutionrelative:appointmentbookingsystem.application\\services\\interface\\islotservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BookingService.cs",
-              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Services\\Implementation\\BookingService.cs",
-              "RelativeDocumentMoniker": "AppointmentBookingSystem.Application\\Services\\Implementation\\BookingService.cs",
-              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Services\\Implementation\\BookingService.cs",
-              "RelativeToolTip": "AppointmentBookingSystem.Application\\Services\\Implementation\\BookingService.cs",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAowFIAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T10:05:28.903Z",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "AppointmentBookingSystem.Web\\appsettings.json",
+              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\appsettings.json",
+              "RelativeToolTip": "AppointmentBookingSystem.Web\\appsettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-08T10:31:22.905Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JobService.cs",
-              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Job\\JobService.cs",
-              "RelativeDocumentMoniker": "AppointmentBookingSystem.Infrastructure\\Job\\JobService.cs",
-              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Job\\JobService.cs",
-              "RelativeToolTip": "AppointmentBookingSystem.Infrastructure\\Job\\JobService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAzwB0AAAAQAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "booking.js",
+              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\js\\booking.js",
+              "RelativeDocumentMoniker": "AppointmentBookingSystem.Web\\wwwroot\\js\\booking.js",
+              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\wwwroot\\js\\booking.js",
+              "RelativeToolTip": "AppointmentBookingSystem.Web\\wwwroot\\js\\booking.js",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAEwHIAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-08T10:28:42.942Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SlotService.cs",
+              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Services\\Implementation\\SlotService.cs",
+              "RelativeDocumentMoniker": "AppointmentBookingSystem.Application\\Services\\Implementation\\SlotService.cs",
+              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Services\\Implementation\\SlotService.cs",
+              "RelativeToolTip": "AppointmentBookingSystem.Application\\Services\\Implementation\\SlotService.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAawEgAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T10:05:07.28Z",
+              "WhenOpened": "2024-12-08T10:26:52.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ISlotService.cs",
+              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Services\\Interface\\ISlotService.cs",
+              "RelativeDocumentMoniker": "AppointmentBookingSystem.Application\\Services\\Interface\\ISlotService.cs",
+              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Services\\Interface\\ISlotService.cs",
+              "RelativeToolTip": "AppointmentBookingSystem.Application\\Services\\Interface\\ISlotService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAASwA8AAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T10:26:02.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "BookingController.cs",
-              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Controllers\\BookingController.cs",
-              "RelativeDocumentMoniker": "AppointmentBookingSystem.Web\\Controllers\\BookingController.cs",
-              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Controllers\\BookingController.cs",
-              "RelativeToolTip": "AppointmentBookingSystem.Web\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAkwJYAAABiAAAAAAAAAA==",
+              "Title": "SlotController.cs",
+              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Controllers\\SlotController.cs",
+              "RelativeDocumentMoniker": "AppointmentBookingSystem.Web\\Controllers\\SlotController.cs",
+              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Controllers\\SlotController.cs",
+              "RelativeToolTip": "AppointmentBookingSystem.Web\\Controllers\\SlotController.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAADwv4wAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T10:00:10.762Z",
+              "WhenOpened": "2024-12-08T10:25:12.009Z",
               "EditorCaption": ""
             }
           ]

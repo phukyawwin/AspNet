@@ -50,7 +50,7 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
 
         public IEnumerable<Slot> GetAllSlot()
         {
-            return _unitOfWork.SlotRepository.GetAll(u => u.IsAvailable == true, includeProperties: "Doctor");
+            return _unitOfWork.SlotRepository.GetAll(u => u.IsAvailable == true, includeProperties: "Doctor").OrderBy(u=>u.Doctor.Name);
         }
 
         public Slot GetSlotById(int id)
@@ -65,6 +65,12 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
         {
             _unitOfWork.SlotRepository.Update(slot);
             _unitOfWork.Save();
+        }
+
+        public IEnumerable<Slot> GetSlotByDoctorIdAndDays(int doctorId, string date)
+        {
+            DateTime selectedDate = DateTime.Parse(date);
+            return _unitOfWork.SlotRepository.GetAll(u => u.DoctorId == doctorId && u.DayOfWeek==selectedDate.DayOfWeek, includeProperties: "Doctor");
         }
     }
 }

@@ -13,6 +13,7 @@ namespace AppointmentBookingSystem.Application.Services.Interface
         Slot GetSlotById(int id);
 
         IEnumerable<Slot> GetSlotByDoctorId(int doctorId);
+        IEnumerable<Slot> GetSlotByDoctorIdAndDays(int doctorId, string date);
         void CreateSlot(Slot slot);
         void UpdateSlot(Slot slot);
         bool DeleteSlot(int id);
