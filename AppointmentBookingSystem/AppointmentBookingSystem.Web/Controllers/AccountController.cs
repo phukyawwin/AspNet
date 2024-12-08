@@ -1,4 +1,7 @@
-﻿using AppointmentBookingSystem.Application.Common.Interfaces;
+﻿using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using AppointmentBookingSystem.Application.Common.Interfaces;
 using AppointmentBookingSystem.Application.Common.Utility;
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Web.ViewModels;
@@ -6,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.IdentityModel.Tokens;
 
 namespace AppointmentBookingSystem.Web.Controllers
 {
@@ -14,18 +18,20 @@ namespace AppointmentBookingSystem.Web.Controllers
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-
+        private readonly IConfiguration _configuration;
         public AccountController(
             UserManager<ApplicationUser> userManager,
             RoleManager<IdentityRole> roleManager,
-            SignInManager<ApplicationUser> signInManager)
+            SignInManager<ApplicationUser> signInManager,
+            IConfiguration configuration)
         {
             _roleManager = roleManager;
             _userManager = userManager;
             _signInManager = signInManager;
+            _configuration = configuration;
         }
 
-        public IActionResult Login(string returnUrl = null)
+        public IActionResult Index(string returnUrl = null)
         {
 
             returnUrl ??= Url.Content("~/");
@@ -35,7 +41,7 @@ namespace AppointmentBookingSystem.Web.Controllers
                 RedirectUrl = returnUrl
             };
 
-            return View(loginVM);
+            return View("login");
         }
         public IActionResult VerifyEmail()
         {
@@ -111,7 +117,7 @@ namespace AppointmentBookingSystem.Web.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "Account");
         }
 
         public IActionResult AccessDenied()
@@ -209,6 +215,41 @@ namespace AppointmentBookingSystem.Web.Controllers
                     var user = await _userManager.FindByEmailAsync(loginVM.Email);
                     if (await _userManager.IsInRoleAsync(user, SD.Role_Admin))
                     {
+                        HttpContext.Session.SetString("email", user.Email); // server session
+
+                        CookieOptions options = new CookieOptions();
+                        options.Expires = DateTime.Now.AddMinutes(1);
+                        HttpContext.Response.Cookies.Append("email", user.Email, options);
+
+                        var issuer = _configuration["Jwt:Issuer"];
+                        var audience = _configuration["Jwt:Audience"];
+                        var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
+                        var tokenDescriptor = new SecurityTokenDescriptor
+                        {
+                            Subject = new ClaimsIdentity(new[]
+                            {
+                        new Claim("Id", Guid.NewGuid().ToString()),
+                        //new Claim("SessionExpired", DateTime.Now.AddMinutes(15).ToString("o")),
+                        new Claim("SessionExpired", DateTime.Now.AddMinutes(15).ToString("o")),
+                        new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                        new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                    }),
+                            Expires = DateTime.UtcNow.AddMinutes(10),
+                            Issuer = issuer,
+                            Audience = audience,
+                            SigningCredentials = new SigningCredentials
+                            (new SymmetricSecurityKey(key),
+                            SecurityAlgorithms.HmacSha512Signature)
+                        };
+                        var tokenHandler = new JwtSecurityTokenHandler();
+                        var token = tokenHandler.CreateToken(tokenDescriptor);
+                        var jwtToken = tokenHandler.WriteToken(token);
+                        HttpContext.Response.Headers.Append("jwt_token", jwtToken);
+                        HttpContext.Response.Cookies.Append("jwt_token", jwtToken, options);
+                        HttpContext.Session.SetString("jwt_token", jwtToken);
+                        var jwt = HttpContext.Session.GetString("jwt_token");
+
+
                         return RedirectToAction("Index", "Home");
                     }
                     else

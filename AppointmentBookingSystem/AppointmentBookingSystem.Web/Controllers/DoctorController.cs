@@ -5,10 +5,12 @@ using AppointmentBookingSystem.Web.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
 
 namespace AppointmentBookingSystem.Web.Controllers
 {
-    
+    [Authorize]
     public class DoctorController : Controller
     {
         private readonly IDoctorService _docterService;
@@ -22,6 +24,7 @@ namespace AppointmentBookingSystem.Web.Controllers
 
         public IActionResult Index()
         {
+          
             var docters = _docterService.GetAllDoctors();
             return View(docters);
         }

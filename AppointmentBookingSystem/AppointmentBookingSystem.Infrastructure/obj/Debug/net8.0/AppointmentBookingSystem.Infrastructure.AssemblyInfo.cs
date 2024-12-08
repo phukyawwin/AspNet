@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AppointmentBookingSystem.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b7c314d9f529d6b7af8e823896df2d6a823c453")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4864b4fd6521a9084ae18b3bd0334119227dec27")]
 [assembly: System.Reflection.AssemblyProductAttribute("AppointmentBookingSystem.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AppointmentBookingSystem.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 using AppointmentBookingSystem.Application.Common.Contract;
 using AppointmentBookingSystem.Application.Common.Interfaces;
 using AppointmentBookingSystem.Application.Common.Job;
@@ -9,12 +10,42 @@ using AppointmentBookingSystem.Infrastructure.Data;
 using AppointmentBookingSystem.Infrastructure.Email;
 using AppointmentBookingSystem.Infrastructure.Job;
 using AppointmentBookingSystem.Infrastructure.Repository;
+using AppointmentBookingSystem.Web.Middlewares;
 using Hangfire;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options => {
+    options.IdleTimeout = TimeSpan.FromMinutes(30);//You can set Time   
+});
+
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(o =>
+{
+    o.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey
+        (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = false,
+        ValidateIssuerSigningKey = true
+    };
+});
+builder.Services.AddAuthorization();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -27,7 +58,7 @@ builder.Services.AddIdentity<ApplicationUser,IdentityRole>()
 builder.Services.ConfigureApplicationCookie(option =>
 {
     option.AccessDeniedPath = "/Account/AccessDenied";
-    option.LoginPath = "/Account/Login";
+    option.LoginPath = "/Account/Index";
 });
 builder.Services.Configure<IdentityOptions>(option =>
 {
@@ -51,7 +82,7 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
-
+app.UseSession();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -62,10 +93,11 @@ RecurringJob.AddOrUpdate<IJobService>("send-email-reminder-job",
     x => x.StartSendReminderEmailAsync(),  
     "*/2 * * * *");
 
+app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseJwtMiddleware();
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Account}/{action=Index}/{id?}");
 
 app.Run();
