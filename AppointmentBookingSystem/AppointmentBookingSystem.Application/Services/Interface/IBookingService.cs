@@ -11,6 +11,7 @@ namespace AppointmentBookingSystem.Application.Services.Interface
     {
         IEnumerable<Booking> GetAllBooking();
         IEnumerable<Booking> GetAllBookingByCustomer(string id);
+        IEnumerable<Booking> GetAllBookingToSendReminderEmail();
         Booking GetBookingById(int id);
 
         bool checkBookingExitByCustomer(Booking booking);

@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "D:\\Study\\AspNet\\AppointmentBookingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99DAF334-5E77-4A05-92C1-797B2F8A8BB2}|AppointmentBookingSystem.Infrastructure\\AppointmentBookingSystem.Infrastructure.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.infrastructure\\email\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99DAF334-5E77-4A05-92C1-797B2F8A8BB2}|AppointmentBookingSystem.Infrastructure\\AppointmentBookingSystem.Infrastructure.csproj|solutionrelative:appointmentbookingsystem.infrastructure\\email\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{99DAF334-5E77-4A05-92C1-797B2F8A8BB2}|AppointmentBookingSystem.Infrastructure\\AppointmentBookingSystem.Infrastructure.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.infrastructure\\job\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99DAF334-5E77-4A05-92C1-797B2F8A8BB2}|AppointmentBookingSystem.Infrastructure\\AppointmentBookingSystem.Infrastructure.csproj|solutionrelative:appointmentbookingsystem.infrastructure\\job\\jobservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.application\\services\\implementation\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|solutionrelative:appointmentbookingsystem.application\\services\\implementation\\bookingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Migrations\\20241208075921_addEmailTemplateForCancle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AppointmentBookingSystem.Infrastructure\\Migrations\\20241208075921_addEmailTemplateForCancle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.application\\common\\contract\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9AFFB5CD-4A71-4A55-AFE8-1B101F09F0FF}|AppointmentBookingSystem.Application\\AppointmentBookingSystem.Application.csproj|solutionrelative:appointmentbookingsystem.application\\common\\contract\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{99DAF334-5E77-4A05-92C1-797B2F8A8BB2}|AppointmentBookingSystem.Infrastructure\\AppointmentBookingSystem.Infrastructure.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{99DAF334-5E77-4A05-92C1-797B2F8A8BB2}|AppointmentBookingSystem.Infrastructure\\AppointmentBookingSystem.Infrastructure.csproj|solutionrelative:appointmentbookingsystem.infrastructure\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|d:\\study\\aspnet\\appointmentbookingsystem\\appointmentbookingsystem.web\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1670B27D-AACD-468E-908D-B8E7A5F11EA3}|AppointmentBookingSystem.Web\\AppointmentBookingSystem.Web.csproj|solutionrelative:appointmentbookingsystem.web\\controllers\\bookingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,97 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "BookingService.cs",
               "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Services\\Implementation\\BookingService.cs",
               "RelativeDocumentMoniker": "AppointmentBookingSystem.Application\\Services\\Implementation\\BookingService.cs",
               "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Services\\Implementation\\BookingService.cs",
               "RelativeToolTip": "AppointmentBookingSystem.Application\\Services\\Implementation\\BookingService.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAIwEEAAAB/AAAAAAAAAA==",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAowFIAAABpAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T08:02:14.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "20241208075921_addEmailTemplateForCancle.cs",
-              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Migrations\\20241208075921_addEmailTemplateForCancle.cs",
-              "RelativeDocumentMoniker": "AppointmentBookingSystem.Infrastructure\\Migrations\\20241208075921_addEmailTemplateForCancle.cs",
-              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Migrations\\20241208075921_addEmailTemplateForCancle.cs",
-              "RelativeToolTip": "AppointmentBookingSystem.Infrastructure\\Migrations\\20241208075921_addEmailTemplateForCancle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T07:59:21.992Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Common\\Contract\\IEmailService.cs",
-              "RelativeDocumentMoniker": "AppointmentBookingSystem.Application\\Common\\Contract\\IEmailService.cs",
-              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Application\\Common\\Contract\\IEmailService.cs",
-              "RelativeToolTip": "AppointmentBookingSystem.Application\\Common\\Contract\\IEmailService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T07:52:10.857Z",
+              "WhenOpened": "2024-12-08T10:05:28.903Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "JobService.cs",
+              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Job\\JobService.cs",
+              "RelativeDocumentMoniker": "AppointmentBookingSystem.Infrastructure\\Job\\JobService.cs",
+              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Job\\JobService.cs",
+              "RelativeToolTip": "AppointmentBookingSystem.Infrastructure\\Job\\JobService.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAzwB0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T10:05:07.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "BookingController.cs",
               "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Controllers\\BookingController.cs",
               "RelativeDocumentMoniker": "AppointmentBookingSystem.Web\\Controllers\\BookingController.cs",
               "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\Controllers\\BookingController.cs",
               "RelativeToolTip": "AppointmentBookingSystem.Web\\Controllers\\BookingController.cs",
-              "ViewState": "AgIAAGoAAAAAAAAAAAAkwHQAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAkwJYAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T07:46:36.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Email\\EmailService.cs",
-              "RelativeDocumentMoniker": "AppointmentBookingSystem.Infrastructure\\Email\\EmailService.cs",
-              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Email\\EmailService.cs",
-              "RelativeToolTip": "AppointmentBookingSystem.Infrastructure\\Email\\EmailService.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAqwDMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T07:46:09.512Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "AppointmentBookingSystem.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "AppointmentBookingSystem.Infrastructure\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAADAAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T07:45:26.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "AppointmentBookingSystem.Web\\appsettings.json",
-              "ToolTip": "D:\\Study\\AspNet\\AppointmentBookingSystem\\AppointmentBookingSystem.Web\\appsettings.json",
-              "RelativeToolTip": "AppointmentBookingSystem.Web\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-08T07:40:24.108Z",
+              "WhenOpened": "2024-12-08T10:00:10.762Z",
               "EditorCaption": ""
             }
           ]

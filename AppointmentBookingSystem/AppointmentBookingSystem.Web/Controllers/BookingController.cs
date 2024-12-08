@@ -4,6 +4,7 @@ using AppointmentBookingSystem.Application.Services.Implementation;
 using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Web.ViewModels;
+using Hangfire;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -97,12 +98,14 @@ namespace AppointmentBookingSystem.Web.Controllers
                 {
                     if (_bookingService.getBookingCountOnDate(obj.Booking) <= slot.MaxPatients)
                     {
-                        var user = await _userManager.GetUserAsync(User);
+                     
                         _bookingService.CreateBooking(obj.Booking);
                         TempData["success"] = "The Booking has been created successfully.";
-                        //await _emailService.SendEmailAsync(user.Email, "Booking Confirmation", "<p>Your booking has been confirmed. </p>");
+                      
                         obj.Booking.Slot=slot;
-                        _emailService.SendEmailConfirmation(user, obj.Booking);
+                        obj.Booking.Customer = await _userManager.FindByIdAsync(obj.Booking.CustomerId);
+                        BackgroundJob.Enqueue(() => _emailService.SendEmailConfirmation(obj.Booking.Customer, obj.Booking));
+                       
                         return RedirectToAction(nameof(Index));
                     }
                     else
@@ -143,15 +146,14 @@ namespace AppointmentBookingSystem.Web.Controllers
             {
                 _bookingService.DeleteBooking(objFromDb.Id);
                 TempData["success"] = "The Booking has been cancle successfully.";
-                var user = await _userManager.GetUserAsync(User);
-                _emailService.SendEmailCancle(user, objFromDb);
+                
+                BackgroundJob.Enqueue(() => _emailService.SendEmailConfirmation(objFromDb.Customer, objFromDb));
                 return RedirectToAction(nameof(Index));
             }
             TempData["error"] = "The booking could not be cancle.";
             return View();
             
         }
-
-        
+  
     }
 }

@@ -38,6 +38,8 @@ namespace AppointmentBookingSystem.Domain.Entities
         [Required]
         [StringLength(20)]
         public string Status { get; set; } = "Confirmed";
+
+        public bool IsSendReminderNoti { get; set; } = false;
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime UpdatedDate { get; set; } = DateTime.Now;
     }

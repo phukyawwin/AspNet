@@ -27,11 +27,14 @@ namespace AppointmentBookingSystem.Infrastructure.Email
             _unitOfWork = unitOfWork;
         }
 
-        public Task<bool> SendEmailReminder(ApplicationUser user, Booking booking)
+        public async Task<bool>  SendEmailReminder(ApplicationUser? user, Booking booking)
         {
+            if (user == null)
+            {
+            }
             var template = _unitOfWork.EmailTemplateRepository.GetTemplateByName("Appointment Reminder");
             prepareEmailTemplateAndSendEmail(user, booking, template);
-            return Task.FromResult(true);
+            return true;
         }
         public Task<bool> SendEmailCancle(ApplicationUser user, Booking booking)
         {
@@ -46,7 +49,7 @@ namespace AppointmentBookingSystem.Infrastructure.Email
             return Task.FromResult(true);
         }
 
-        public void prepareEmailTemplateAndSendEmail(ApplicationUser user, Booking booking,EmailTemplate template)
+        public async Task<bool> prepareEmailTemplateAndSendEmail(ApplicationUser user, Booking booking,EmailTemplate template)
         {
             if (template != null)
             {
@@ -62,7 +65,9 @@ namespace AppointmentBookingSystem.Infrastructure.Email
                 string subject = ReplacePlaceholders(template.Subject, placeholders);
                 string body = ReplacePlaceholders(template.Body, placeholders);
                 SendEmailAsync(user.Email, user.Name, subject, body);
+                return true;
             }
+            return false;
         }
         public async Task<bool> SendEmailAsync(string email, string receiverName, string subject, string message)
         {
@@ -89,7 +94,7 @@ namespace AppointmentBookingSystem.Infrastructure.Email
             {
                 smtp.Send(mess);
             }
-            return false;
+            return true;
         }
 
         public string ReplacePlaceholders(string template, Dictionary<string, string> placeholders)

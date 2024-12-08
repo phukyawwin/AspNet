@@ -77,5 +77,10 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
            return _unitOfWork.BookingRepository.GetAll(u => u.Status == "Confirmed" && u.SlotId == booking.SlotId &&
              u.AppointmentDate == booking.AppointmentDate).Count();
         }
+
+        public IEnumerable<Booking> GetAllBookingToSendReminderEmail()
+        {
+            return _unitOfWork.BookingRepository.GetAll(u => u.AppointmentDate == DateTime.Today.AddDays(1) && u.Status== "Confirmed" && u.IsSendReminderNoti==false, includeProperties: "Customer,Slot.Doctor.SpecialtyDetails");
+        }
     }
 }

@@ -1,11 +1,15 @@
+using System;
 using AppointmentBookingSystem.Application.Common.Contract;
 using AppointmentBookingSystem.Application.Common.Interfaces;
+using AppointmentBookingSystem.Application.Common.Job;
 using AppointmentBookingSystem.Application.Services.Implementation;
 using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Infrastructure.Data;
 using AppointmentBookingSystem.Infrastructure.Email;
+using AppointmentBookingSystem.Infrastructure.Job;
 using AppointmentBookingSystem.Infrastructure.Repository;
+using Hangfire;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -35,6 +39,10 @@ builder.Services.AddScoped<IDoctorService, DoctorService>();
 builder.Services.AddScoped<ISlotService, SlotService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
+builder.Services.AddScoped<IJobService, JobService>();
+builder.Services.AddHangfire(options => options.UseSqlServerStorage(builder.Configuration.GetConnectionString("Hangfire")));
+builder.Services.AddHangfireServer();
+
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -48,6 +56,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseHangfireDashboard();
+
+RecurringJob.AddOrUpdate<IJobService>("send-email-reminder-job", 
+    x => x.StartSendReminderEmailAsync(),  
+    "*/2 * * * *");
 
 app.UseAuthorization();
 
