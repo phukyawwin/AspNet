@@ -38,7 +38,7 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
         }
         public IEnumerable<Specialty> GetAllSpecialtys()
         {
-            return _unitOfWork.SpecialtyRepository.GetAll(u => u.IsActive == true);
+            return _unitOfWork.SpecialtyRepository.GetAll(u => u.IsActive == true).OrderBy(u => u.Name);
         }
 
         public Specialty GetSpecialtyById(int id)

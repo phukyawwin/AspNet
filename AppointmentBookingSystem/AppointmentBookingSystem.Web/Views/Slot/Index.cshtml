@@ -36,8 +36,8 @@
                     <tr>
                         <td>@obj.Doctor.Name</td>
                         <td>@obj.DayOfWeek </td>
-                        <td>@obj.StartTime </td>
-                        <td>@obj.EndTime </td>
+                         <td>@(new DateTime(2000, 1, 1).Add(@obj.StartTime).ToString("hh:mm tt"))</td>
+                        <td>@(new DateTime(2000, 1, 1).Add(@obj.EndTime).ToString("hh:mm tt"))</td>
                         <td>@obj.MaxPatients </td>
                         <td>
                             <div class="w-75 btn-group" role="group">

@@ -50,7 +50,7 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
 
         public IEnumerable<Doctor> GetAllDoctors()
         {
-            return _unitOfWork.DoctorRepository.GetAll(u => u.IsActive == true,includeProperties: "SpecialtyDetails");
+            return _unitOfWork.DoctorRepository.GetAll(u => u.IsActive == true,includeProperties: "SpecialtyDetails").OrderBy(u => u.Name);
         }
 
         public Doctor GetDoctorById(int id)

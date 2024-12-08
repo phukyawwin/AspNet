@@ -55,7 +55,7 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
         }
         public IEnumerable<Booking> GetAllBooking()
         {
-            return _unitOfWork.BookingRepository.GetAll( includeProperties: "Customer,Slot.Doctor.SpecialtyDetails");
+            return _unitOfWork.BookingRepository.GetAll( includeProperties: "Customer,Slot.Doctor.SpecialtyDetails").OrderByDescending(u=>u.BookingDate);
         }
         public IEnumerable<Booking> GetAllBookingByCustomer(string id)
         {
