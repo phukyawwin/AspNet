@@ -27,9 +27,27 @@ namespace AppointmentBookingSystem.Infrastructure.Email
             _unitOfWork = unitOfWork;
         }
 
+        public Task<bool> SendEmailReminder(ApplicationUser user, Booking booking)
+        {
+            var template = _unitOfWork.EmailTemplateRepository.GetTemplateByName("Appointment Reminder");
+            prepareEmailTemplateAndSendEmail(user, booking, template);
+            return Task.FromResult(true);
+        }
+        public Task<bool> SendEmailCancle(ApplicationUser user, Booking booking)
+        {
+            var template = _unitOfWork.EmailTemplateRepository.GetTemplateByName("Booking Cancellation");
+            prepareEmailTemplateAndSendEmail(user, booking, template);
+            return Task.FromResult(true);
+        }
         public Task<bool> SendEmailConfirmation(ApplicationUser user, Booking booking)
         {
             var template = _unitOfWork.EmailTemplateRepository.GetTemplateByName("Appointment Confirmation");
+            prepareEmailTemplateAndSendEmail(user, booking,template);
+            return Task.FromResult(true);
+        }
+
+        public void prepareEmailTemplateAndSendEmail(ApplicationUser user, Booking booking,EmailTemplate template)
+        {
             if (template != null)
             {
                 var placeholders = new Dictionary<string, string>
@@ -43,20 +61,10 @@ namespace AppointmentBookingSystem.Infrastructure.Email
 
                 string subject = ReplacePlaceholders(template.Subject, placeholders);
                 string body = ReplacePlaceholders(template.Body, placeholders);
-                SendEmailAsync(user.Email,user.Name ,subject, body);
+                SendEmailAsync(user.Email, user.Name, subject, body);
             }
-            return Task.FromResult(true);
         }
-
-        public string ReplacePlaceholders(string template, Dictionary<string, string> placeholders)
-        {
-            foreach (var placeholder in placeholders)
-            {
-                template = template.Replace($"{{{{{placeholder.Key}}}}}", placeholder.Value);
-            }
-            return template;
-        }
-        public async Task<bool> SendEmailAsync(string email,string receiverName, string subject, string message)
+        public async Task<bool> SendEmailAsync(string email, string receiverName, string subject, string message)
         {
             var senderEmail = new MailAddress(_senderEmail, _senderName);
             var receiverEmail = new MailAddress(email, receiverName);
@@ -84,6 +92,15 @@ namespace AppointmentBookingSystem.Infrastructure.Email
             return false;
         }
 
+        public string ReplacePlaceholders(string template, Dictionary<string, string> placeholders)
+        {
+            foreach (var placeholder in placeholders)
+            {
+                template = template.Replace($"{{{{{placeholder.Key}}}}}", placeholder.Value);
+            }
+            return template;
+        }
+        
         
     }
 }

@@ -11,5 +11,7 @@ namespace AppointmentBookingSystem.Application.Common.Contract
     {
         Task<bool> SendEmailAsync(string email, string receiverName, string subject, string message);
         Task<bool> SendEmailConfirmation(ApplicationUser user,Booking booking);
+        Task<bool> SendEmailCancle(ApplicationUser user, Booking booking);
+        Task<bool> SendEmailReminder(ApplicationUser user, Booking booking);
     }
 }

@@ -63,7 +63,7 @@ namespace AppointmentBookingSystem.Application.Services.Implementation
         }
         public Booking GetBookingById(int id)
         {
-            return _unitOfWork.BookingRepository.Get(u => u.Id == id, includeProperties: "Customer,Slot");
+            return _unitOfWork.BookingRepository.Get(u => u.Id == id, includeProperties: "Customer,Slot.Doctor.SpecialtyDetails");
         }
 
         public void UpdateBooking(Booking booking)

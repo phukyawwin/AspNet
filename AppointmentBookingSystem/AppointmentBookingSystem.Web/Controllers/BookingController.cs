@@ -108,11 +108,13 @@ namespace AppointmentBookingSystem.Web.Controllers
                     else
                     {
                         TempData["error"] = "Booking limit for the selected date has been reached.";
+                        return RedirectToAction(nameof(Index));
                     }
                 }
                 else
                 {
                     TempData["error"] = "You have already made a booking for this slot.";
+                    return RedirectToAction(nameof(Index));
                 }
             }
 
@@ -141,7 +143,9 @@ namespace AppointmentBookingSystem.Web.Controllers
             {
                 _bookingService.DeleteBooking(objFromDb.Id);
                 TempData["success"] = "The Booking has been cancle successfully.";
-                return RedirectToAction(nameof(IndexAsync));
+                var user = await _userManager.GetUserAsync(User);
+                _emailService.SendEmailCancle(user, objFromDb);
+                return RedirectToAction(nameof(Index));
             }
             TempData["error"] = "The booking could not be cancle.";
             return View();

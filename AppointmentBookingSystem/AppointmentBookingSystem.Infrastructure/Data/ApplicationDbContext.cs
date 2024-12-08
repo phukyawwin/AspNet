@@ -42,7 +42,21 @@ namespace AppointmentBookingSystem.Infrastructure.Data
                 Subject = "Appointment Confirmation",
                 Body = "Dear {{CustomerName}},<br>Your appointment is confirmed for {{AppointmentDate}} at {{SlotStartTime}} - {{SlotEndTime}} with Dr. {{DoctorName}}.",
                
-            }
+            },
+             new EmailTemplate
+             {
+                 Id = 2,
+                 Name = "Booking Cancellation",
+                 Subject = "Booking Cancellation Notification",
+                 Body = "Dear {{CustomerName}},<br>Your appointment on {{AppointmentDate}} at {{SlotStartTime}} - {{SlotEndTime}} with Dr. {{DoctorName}} has been cancelled. We apologize for any inconvenience."
+             },
+              new EmailTemplate
+              {
+                  Id = 3,
+                  Name = "Appointment Reminder",
+                  Subject = "Reminder: Your Appointment with Dr. {{DoctorName}}",
+                  Body = "Dear {{CustomerName}},<br>This is a reminder that you have an appointment scheduled for {{AppointmentDate}} at {{SlotStartTime}} - {{SlotEndTime}} with Dr. {{DoctorName}}.<br>We look forward to seeing you."
+              }
         );
         }
     }
