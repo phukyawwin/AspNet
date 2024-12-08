@@ -89,7 +89,7 @@ namespace AppointmentBookingSystem.Web.Controllers
                     if (result.Succeeded)
                     {
                         result = await _userManager.AddPasswordAsync(user, model.NewPassword);
-                        return RedirectToAction("Login", "Account");
+                        return RedirectToAction("Index", "Account");
                     }
                     else
                     {

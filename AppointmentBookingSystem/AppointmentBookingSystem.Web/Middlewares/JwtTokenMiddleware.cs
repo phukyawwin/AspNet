@@ -21,6 +21,9 @@ namespace AppointmentBookingSystem.Web.Middlewares
         {
             "/Account/Login",
             "/Account/Index",
+            "/Account/Register",
+            "/Account/VerifyEmail",
+            "/Account/ChangePassword",
         };
         public async Task InvokeAsync(HttpContext context)
         {
