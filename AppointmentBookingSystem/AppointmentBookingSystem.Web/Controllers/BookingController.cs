@@ -1,4 +1,5 @@
-﻿using AppointmentBookingSystem.Application.Common.Utility;
+﻿using AppointmentBookingSystem.Application.Common.Contract;
+using AppointmentBookingSystem.Application.Common.Utility;
 using AppointmentBookingSystem.Application.Services.Implementation;
 using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
@@ -17,14 +18,16 @@ namespace AppointmentBookingSystem.Web.Controllers
         private readonly ISpecialtyService _specialtyService;
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ISlotService _slotService;
+        private readonly IEmailService _emailService;
 
-        public BookingController(IBookingService bookingService, ISpecialtyService specialtyService, UserManager<ApplicationUser> userManager, ISlotService slotService)
+        public BookingController(IBookingService bookingService, ISpecialtyService specialtyService, UserManager<ApplicationUser> userManager, ISlotService slotService, IEmailService emailService)
         {
 
             _bookingService = bookingService;
             _specialtyService = specialtyService;
             _userManager = userManager;
             _slotService = slotService;
+            _emailService = emailService;
         }
 
 
@@ -94,8 +97,12 @@ namespace AppointmentBookingSystem.Web.Controllers
                 {
                     if (_bookingService.getBookingCountOnDate(obj.Booking) <= slot.MaxPatients)
                     {
+                        var user = await _userManager.GetUserAsync(User);
                         _bookingService.CreateBooking(obj.Booking);
                         TempData["success"] = "The Booking has been created successfully.";
+                        //await _emailService.SendEmailAsync(user.Email, "Booking Confirmation", "<p>Your booking has been confirmed. </p>");
+                        obj.Booking.Slot=slot;
+                        _emailService.SendEmailConfirmation(user, obj.Booking);
                         return RedirectToAction(nameof(Index));
                     }
                     else

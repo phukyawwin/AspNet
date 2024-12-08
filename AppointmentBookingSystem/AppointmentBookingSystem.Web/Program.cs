@@ -1,8 +1,10 @@
+using AppointmentBookingSystem.Application.Common.Contract;
 using AppointmentBookingSystem.Application.Common.Interfaces;
 using AppointmentBookingSystem.Application.Services.Implementation;
 using AppointmentBookingSystem.Application.Services.Interface;
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Infrastructure.Data;
+using AppointmentBookingSystem.Infrastructure.Email;
 using AppointmentBookingSystem.Infrastructure.Repository;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +34,7 @@ builder.Services.AddScoped<ISpecialtyService, SpecialtyService>();
 builder.Services.AddScoped<IDoctorService, DoctorService>();
 builder.Services.AddScoped<ISlotService, SlotService>();
 builder.Services.AddScoped<IBookingService, BookingService>();
+builder.Services.AddScoped<IEmailService, EmailService>();
 var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

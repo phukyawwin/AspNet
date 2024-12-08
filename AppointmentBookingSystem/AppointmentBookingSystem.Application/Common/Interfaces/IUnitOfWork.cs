@@ -12,6 +12,7 @@ namespace AppointmentBookingSystem.Application.Common.Interfaces
         IDoctorRepository DoctorRepository { get; }
         ISlotRepository SlotRepository { get; }
         IBookingRepository BookingRepository { get; }
+        IEmailTemplateRepository EmailTemplateRepository { get; }
         void Save();
     }
 }
