@@ -1,3 +1,4 @@
+using BlazorChatApp.Client.Services;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 
 namespace BlazorChatApp.Client
@@ -7,7 +8,7 @@ namespace BlazorChatApp.Client
         static async Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
-
+            builder.Services.AddScoped<ChatService>();
             await builder.Build().RunAsync();
         }
     }

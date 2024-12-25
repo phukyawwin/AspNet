@@ -1,4 +1,4 @@
-using BlazorChatApp.Client.Pages;
+using BlazorChatApp.Client.Services;
 using BlazorChatApp.Components;
 using BlazorChatApp.Hubs;
 
@@ -14,6 +14,7 @@ namespace BlazorChatApp
             builder.Services.AddRazorComponents()
                 .AddInteractiveWebAssemblyComponents();
             builder.Services.AddSignalR();
+            builder.Services.AddScoped<ChatService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

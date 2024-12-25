@@ -1,7 +1,9 @@
 ﻿@page "/chat"
+@implements IDisposable
+@using BlazorChatApp.Client.Services
 @using Microsoft.AspNetCore.SignalR.Client
 @using BlazorChatApp.Domain.Entities
-@inject NavigationManager Navigation
+@inject ChatService chatService
 @rendermode InteractiveWebAssembly
 <PageTitle>Chat</PageTitle>
 <div class="row">
@@ -10,7 +12,7 @@
 			<div class="card-header">Chat</div>
 			<div class="card-body">
 				<ul class="list-group">
-					@foreach (var chat in Chats)
+					@foreach (var chat in chatService.Chats)
 					{
 						<li class="list-group-item mb-2">
 							@chat.Date.Date.ToString("dd/MMM/yy")
@@ -34,7 +36,8 @@
 				</div>
 			</div>
 			<div class="card-footer fw-bold">
-				@if(!IsConnected){
+				@if (!chatService.IsConnected)
+				{
 					<div class="alert alert-danger">
 						Chat Disconnected
 					</div>
@@ -51,38 +54,15 @@
 
 @code {
 	public static string? StoredUserName{ get; set; }
-	private HubConnection? hubConnection;
-	private List<Chat> Chats = [];
 	private Chat Chat = new();
 
-	protected async override Task OnInitializedAsync()
+	protected override async Task OnInitializedAsync()
 	{
-		hubConnection = new HubConnectionBuilder()
-		.WithUrl(Navigation.ToAbsoluteUri("/chathub"))
-		.Build();
-
-		hubConnection.On<Chat>("ReceiveMessage", (Chat) =>
-		{
-
-			Chats.Add(Chat);
-			InvokeAsync(()=> StateHasChanged());
-		});
-
-		await hubConnection.StartAsync();
+		chatService.InvokeChatDisplay += StateHasChanged;
+		await chatService.StartConnectionAsync();
+		chatService.ReceiveMessage();
 	}
-	private bool IsConnected =>
-	hubConnection!.State == HubConnectionState.Connected;
-
-	void Send(){
-		Chat.UserName ??= StoredUserName;
-		hubConnection!.SendAsync("SendMessage", Chat);
-	}
-	void SendMessageClicked(){
-		Chat.Date = DateTime.Now;
-		if(Chat.UserName!=""){
-			StoredUserName = Chat.UserName;
-		}
-		Send();
-		Chat.Message = null;
-	}
+	async void SendMessageClicked() => await chatService.SendChat(Chat);
+	public void Dispose() =>
+	chatService.InvokeChatDisplay -= StateHasChanged;
 }
