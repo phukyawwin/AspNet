@@ -1,6 +1,9 @@
 using BlazorChatApp.Client.Services;
 using BlazorChatApp.Components;
 using BlazorChatApp.Hubs;
+using BlazorChatApp.Infrastructure.Data;
+using BlazorChatApp.Infrastructure.Repository;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlazorChatApp
 {
@@ -13,8 +16,15 @@ namespace BlazorChatApp
             // Add services to the container.
             builder.Services.AddRazorComponents()
                 .AddInteractiveWebAssemblyComponents();
+            builder.Services.AddDbContext<ApplicationDbContext>(option =>
+option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            builder.Services.AddControllers();
+            builder.Services.AddScoped<ChatRepository>();
+
             builder.Services.AddSignalR();
             builder.Services.AddScoped<ChatService>();
+            
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -37,6 +47,7 @@ namespace BlazorChatApp
             app.MapRazorComponents<App>()
                 .AddInteractiveWebAssemblyRenderMode()
                 .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
+            app.MapControllers();
             app.MapHub<ChatHub>("/chathub");
             app.Run();
         }
