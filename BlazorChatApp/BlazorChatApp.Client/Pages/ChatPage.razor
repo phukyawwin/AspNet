@@ -1,5 +1,6 @@
 ﻿@page "/chat"
 @using Microsoft.AspNetCore.SignalR.Client
+@using BlazorChatApp.Domain.Entities
 @inject NavigationManager Navigation
 @rendermode InteractiveWebAssembly
 <PageTitle>Chat</PageTitle>
@@ -9,23 +10,34 @@
 			<div class="card-header">Chat</div>
 			<div class="card-body">
 				<ul class="list-group">
-					@foreach(var message in Messages){
-						<li class="mb-2">@message</li>
+					@foreach (var chat in Chats)
+					{
+						<li class="list-group-item mb-2">
+							@chat.Date.Date.ToString("dd/MMM/yy")
+							<br/>
+							<span class="fw-bold">@chat.UserName:</span>
+							<br />
+							@chat.Message
+						</li>
 					}
 				</ul>
-				<div class="border-primary">
-					<div class="hstack gap-2 mb-4">
-						<input type="text" class="form-control w-25" @bind="userName"/>
-						<textarea class="form-control " @bind="Message" />
-						<button class="btn btn-success" @onclick="Send">Send</button>
-					</div>
+				<div class="mt=3">
+					<EditForm Model="Chat" OnValidSubmit="SendMessageClicked">
+						<DataAnnotationsValidator/>
+						<div class="vstack gap-1">
+							<InputText @bind-Value="Chat.UserName" class="form-control w-25" placeholder="Username"/>
+							<InputTextArea @bind-Value="Chat.Message" class="form-control mt-2" placeholder="Message" />
+						</div>
+						<button class="float-end btn btn-success mt-3" type="submit">Send</button>
+					</EditForm>
+
 				</div>
 			</div>
-			<div class="card-footer">
+			<div class="card-footer fw-bold">
 				@if(!IsConnected){
 					<div class="alert alert-danger">
 						Chat Disconnected
-						</div>
+					</div>
 				}else{
 					<div class="alert alert-success">
 						Chat Connected
@@ -38,11 +50,10 @@
 
 
 @code {
+	public static string? StoredUserName{ get; set; }
 	private HubConnection? hubConnection;
-	private List<string> Messages = [];
-	private string userName;
-	public string? Message;
-	private DateTime Date = DateTime.Now;
+	private List<Chat> Chats = [];
+	private Chat Chat = new();
 
 	protected async override Task OnInitializedAsync()
 	{
@@ -50,10 +61,10 @@
 		.WithUrl(Navigation.ToAbsoluteUri("/chathub"))
 		.Build();
 
-		hubConnection.On<string, string, DateTime>("ReceiveMessage", (userName, Message, Date) =>
+		hubConnection.On<Chat>("ReceiveMessage", (Chat) =>
 		{
-			var concatMessage = $"{Date}{Environment.NewLine}{userName}{Environment.NewLine}{Message}";
-			Messages.Add(concatMessage);
+
+			Chats.Add(Chat);
 			InvokeAsync(()=> StateHasChanged());
 		});
 
@@ -62,6 +73,16 @@
 	private bool IsConnected =>
 	hubConnection!.State == HubConnectionState.Connected;
 
-	Task Send() =>
-	hubConnection!.SendAsync("SendMessage", userName, Message, Date);
+	void Send(){
+		Chat.UserName ??= StoredUserName;
+		hubConnection!.SendAsync("SendMessage", Chat);
+	}
+	void SendMessageClicked(){
+		Chat.Date = DateTime.Now;
+		if(Chat.UserName!=""){
+			StoredUserName = Chat.UserName;
+		}
+		Send();
+		Chat.Message = null;
+	}
 }

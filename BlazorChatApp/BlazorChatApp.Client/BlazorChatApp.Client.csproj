@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorChatApp.Domain\BlazorChatApp.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
