@@ -9,7 +9,6 @@ using BlazorChatApp.Infrastructure.Repository;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-
 namespace BlazorChatApp
 {
     public class Program
@@ -33,7 +32,7 @@ option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultScheme = IdentityConstants.ApplicationScheme;
-                options.DefaultSignInScheme=IdentityConstants.ExternalScheme;
+                options.DefaultSignInScheme = IdentityConstants.ExternalScheme;
             }
             ).AddIdentityCookies();
             builder.Services.AddCascadingAuthenticationState();
@@ -43,8 +42,8 @@ option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection
 
             builder.Services.AddSignalR();
             builder.Services.AddScoped<ChatService>();
-            
-            
+           
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -67,7 +66,7 @@ option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection
             app.MapRazorComponents<App>()
                 .AddInteractiveWebAssemblyRenderMode()
                 .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
-           
+
             app.MapHub<ChatHub>("/chathub");
             app.MapControllers();
             app.MapAddition();

@@ -12,7 +12,7 @@ namespace BlazorChatApp.Authentication
             accountGroup.MapPost("/Logout", async(ClaimsPrincipal user,SignInManager<AppUser> signInManager) =>
             {
                 await signInManager.SignOutAsync();
-                return TypedResults.LocalRedirect("/");
+                return TypedResults.LocalRedirect("/Account/Login");
             });
             return accountGroup;
             
