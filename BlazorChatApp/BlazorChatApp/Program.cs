@@ -1,8 +1,13 @@
+
+using BlazorChatApp.Authentication;
 using BlazorChatApp.Client.Services;
 using BlazorChatApp.Components;
+using BlazorChatApp.Domain.Entities;
 using BlazorChatApp.Hubs;
 using BlazorChatApp.Infrastructure.Data;
 using BlazorChatApp.Infrastructure.Repository;
+using Microsoft.AspNetCore.Components.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
 namespace BlazorChatApp
@@ -18,6 +23,21 @@ namespace BlazorChatApp
                 .AddInteractiveWebAssemblyComponents();
             builder.Services.AddDbContext<ApplicationDbContext>(option =>
 option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddIdentityCore<AppUser>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddSignInManager()
+    .AddDefaultTokenProviders();
+
+            builder.Services.AddAuthorization();
+            builder.Services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = IdentityConstants.ApplicationScheme;
+                options.DefaultSignInScheme=IdentityConstants.ExternalScheme;
+            }
+            ).AddIdentityCookies();
+            builder.Services.AddCascadingAuthenticationState();
+            builder.Services.AddScoped<AuthenticationStateProvider, PersistentAuthenticationStateProvider>();
             builder.Services.AddControllers();
             builder.Services.AddScoped<ChatRepository>();
 
@@ -47,8 +67,10 @@ option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection
             app.MapRazorComponents<App>()
                 .AddInteractiveWebAssemblyRenderMode()
                 .AddAdditionalAssemblies(typeof(Client._Imports).Assembly);
-            app.MapControllers();
+           
             app.MapHub<ChatHub>("/chathub");
+            app.MapControllers();
+            app.MapAddition();
             app.Run();
         }
     }

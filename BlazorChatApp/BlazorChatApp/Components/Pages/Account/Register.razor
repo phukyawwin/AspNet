@@ -1,0 +1,75 @@
+﻿@page "/Account/Register"
+<h3>Register</h3>
+<div class="row">
+	<div class="col-md-4">
+		@(Message != "" ? Message : "")
+		<EditForm Model="registerModel" method="post" OnValidSubmit="RegisterAsync" FormName="registerForm">
+			<DataAnnotationsValidator />
+			<h2>Create a new account</h2>
+			<hr />
+			<ValidationSummary class="text-danger" />
+
+			<div class="form-floating mb-3">
+				<InputText @bind-Value="registerModel.FullName" class="form-control" placeholder="John Doe" aria-required="true" />
+				<label for="name">Full Name</label>
+				<ValidationMessage For="@(() => registerModel.FullName)" class="text-danger" />
+			</div>
+
+			<div class="form-floating mb-3">
+				<InputText @bind-Value="registerModel.Email" class="form-control" placeholder="name@example.com" aria-required="true" />
+				<label for="email">Email</label>
+				<ValidationMessage For="@(() => registerModel.Email)" class="text-danger" />
+			</div>
+
+			<div class="form-floating mb-3">
+				<InputText @bind-Value="registerModel.Password" class="form-control" placeholder="Enter your password" type="password" aria-required="true" />
+				<label for="password">Password</label>
+				<ValidationMessage For="@(() => registerModel.Password)" class="text-danger" />
+			</div>
+
+			<div class="form-floating mb-3">
+				<InputText @bind-Value="registerModel.ConfirmPassword" class="form-control" placeholder="Re-enter your password" type="password" aria-required="true" />
+				<label for="confirm-password">Confirm Password</label>
+				<ValidationMessage For="@(() => registerModel.ConfirmPassword)" class="text-danger" />
+			</div>
+
+			<button type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+		</EditForm>
+	</div>
+</div>
+
+
+@code {
+	string Message = "";
+	[SupplyParameterFromForm]
+	RegisterModel registerModel { get; set; } = new();
+
+	async Task RegisterAsync()
+	{
+		var appUser = new AppUser()
+			{
+				FullName = registerModel.FullName,
+				Email = registerModel.Email,
+				PasswordHash = registerModel.Password,
+				UserName = registerModel.Email
+			};
+		var result = await userManager.CreateAsync(appUser, registerModel.Password);
+		if (!result.Succeeded)
+		{
+			Message = "Error occured whiles creating the account";
+			return;
+		}
+		navManager.NavigateTo("/");
+	}
+	public class RegisterModel
+	{
+		[Required]
+		public string FullName { get; set; } = string.Empty;
+		[Required, EmailAddress]
+		public string Email { get; set; } = string.Empty;
+		[Required]
+		public string Password { get; set; } = string.Empty;
+		[Compare(nameof(Password)), Required]
+		public string ConfirmPassword { get; set; } = string.Empty;
+	}
+}

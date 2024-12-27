@@ -1,7 +1,28 @@
-﻿@page "/"
+﻿@page "/home"
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
+@inject AuthenticationStateProvider AuthenticationStateProvider
 
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
+<AuthorizeView>
+	<Authorized>
+
+		<div class="card-header">Welcome
+			[@UserName],
+			You can now join the chat...
+		</div>
+	</Authorized>
+</AuthorizeView>
 
 Welcome to your new app.
+@code {
+	public string UserName { get; set; }
+	protected override async Task OnInitializedAsync()
+	{
+		var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+		var user = authState.User;
+		UserName = user?.Claims.Where(f => f.Type == ClaimTypes.Name).Last().Value ?? "Anonymous";
+	}
+}

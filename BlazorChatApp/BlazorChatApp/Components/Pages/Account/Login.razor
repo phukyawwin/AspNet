@@ -1,0 +1,60 @@
+﻿@page "/"
+
+<h3>Login</h3>
+<div class="row">
+	<div class="col-md-4">
+		@(message != "" ? message : "")
+		<section>
+			<EditForm Model="loginModel" method="post" OnValidSubmit="LoginAsync" FormName="loginForm">
+				<DataAnnotationsValidator />
+				<h2>Use a local account to log in.</h2>
+				<hr />
+				<ValidationSummary class="text-danger" role="alert" />
+
+				<div class="form-floating mb-3">
+					<InputText @bind-Value="loginModel.Email" class="form-control" autocomplete="email" aria-required="true" placeholder="name@example.com" />
+					<label for="email" class="form-label">Email</label>
+					<ValidationMessage For="() => loginModel.Email" class="text-danger" />
+				</div>
+
+				<div class="form-floating mb-3">
+					<InputText type="password" @bind-Value="loginModel.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Password" />
+					<label for="password" class="form-label">Password</label>
+					<ValidationMessage For="() => loginModel.Password" class="text-danger" />
+				</div>
+
+				<button type="submit" class="w-100 btn btn-lg btn-primary">Login</button>
+			</EditForm>
+		</section>
+	</div>
+</div>
+@code {
+	string message = "";
+	[SupplyParameterFromForm]
+	private LoginModel loginModel { get; set; } = new();
+	async Task LoginAsync()
+	{
+		var finduser = await userManager.FindByEmailAsync(loginModel.Email);
+		if (finduser == null)
+		{
+			message = "Sorry, user is not registered";
+			return;
+		}
+		var result = await signInManager.CheckPasswordSignInAsync(finduser, loginModel.Password, false);
+		if (!result.Succeeded)
+		{
+			message = "Sorry, invalid email/password";
+			return;
+		}
+		await signInManager.PasswordSignInAsync(finduser, loginModel.Password, false, false);
+		navManager.NavigateTo("/home", true);
+	}
+
+	public class LoginModel
+	{
+		[Required, EmailAddress]
+		public string Email { get; set; } = string.Empty;
+		[Required]
+		public string Password { get; set; } = string.Empty;
+	}
+}

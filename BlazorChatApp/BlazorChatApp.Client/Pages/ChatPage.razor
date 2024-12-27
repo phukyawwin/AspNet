@@ -2,13 +2,23 @@
 @using BlazorChatApp.Client.Services
 @using Microsoft.AspNetCore.SignalR.Client
 @using BlazorChatApp.Domain.Entities
+@using Microsoft.AspNetCore.Components.Authorization
+@using System.Security.Claims
 @* @inject ChatService chatService *@
 @inject NavigationManager navigationManager
+@inject HttpClient httpClient
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
 @rendermode InteractiveWebAssembly
 <PageTitle>Chat</PageTitle>
 <div class="row">
 	<div class="col-lg-7">
 		<div class="card">
+			<AuthorizeView>
+				<Authorized>
+					<div class="card-header">Chat [@UserName]</div>
+				</Authorized>
+			</AuthorizeView>
 			<div class="card-header">Chat</div>
 			<div class="card-body">
 				<ul class="list-group">
@@ -58,27 +68,36 @@
 	private Chat Chat = new();
 	private HubConnection? _hubConnection;
 	public List<Chat> Chats { get; set; } = [];
+	public string UserName { get; set; }
 	protected override async Task OnInitializedAsync()
 	{
 		_hubConnection = new HubConnectionBuilder()
 				.WithUrl(navigationManager.ToAbsoluteUri("/chathub"))
 				.Build();
 		_hubConnection.On<Chat>("ReceiveMessage", (Chat) =>
-	{
+			{
 
-		Chats.Add(Chat);
-		InvokeAsync(() => StateHasChanged());
-	});
+				Chats.Add(Chat);
+				InvokeAsync(() => StateHasChanged());
+			});
 		await _hubConnection.StartAsync();
 		var httpClient = new HttpClient();
-		Chats = await httpClient.GetFromJsonAsync<List<Chat>>("https://localhost:7084/api/chat");
-
+		Chats = await httpClient.GetFromJsonAsync<List<Chat>>("https://localhost:7134/api/chat");
+		await GetUserName();
 	}
 	public bool IsConnected => _hubConnection!.State == HubConnectionState.Connected;
 
-	public void SendChat() {
+	public void SendChat()
+	{
 		_hubConnection!.SendAsync("SendMessage", Chat);
 		Chat.Message = null;
 	}
-		
+
+	private async Task GetUserName()
+	{
+		var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+		var user = authState.User;
+		UserName = user?.Claims.Where(f => f.Type == ClaimTypes.Name).Last().Value ?? "Anonymous";
+	}
+
 }
