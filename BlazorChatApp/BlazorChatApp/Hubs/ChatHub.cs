@@ -1,4 +1,5 @@
-﻿using BlazorChatApp.Client.DTO;
+﻿
+using BlazorChatApp.Domain.DTOs;
 using BlazorChatApp.Domain.Entities;
 using BlazorChatApp.Infrastructure.Repository;
 using Microsoft.AspNetCore.SignalR;
