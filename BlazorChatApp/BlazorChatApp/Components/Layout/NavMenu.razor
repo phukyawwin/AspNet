@@ -1,9 +1,11 @@
 ﻿@rendermode InteractiveServer
 
+@using BlazorChatApp.Client.Services
 @using Microsoft.AspNetCore.Components.Authorization
 @using System.Security.Claims
 @using Microsoft.AspNetCore.SignalR.Client
 @inject NavigationManager navigationManager
+@inject MyHubConnectionService HubConnectionService
 <div class="top-row ps-3 navbar navbar-dark">
 	<div class="container-fluid">
 		<a class="navbar-brand" href="">BlazorChatApp</a>
@@ -23,8 +25,8 @@
 					</NavLink>
 				</div>
 				<div class="nav-item px-3">
-					<NavLink class="nav-link" href="/chat" Match="NavLinkMatch.All">
-						<span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Chat
+					<NavLink class="nav-link" href="/group-chat" Match="NavLinkMatch.All">
+						<span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span>Group Chat
 					</NavLink>
 				</div>
 				<div class="nav-item px-3">
@@ -59,13 +61,10 @@
 	[CascadingParameter]
 	public Task<AuthenticationState> authenticationState { get; set; }
 	private HubConnection? _hubConnection;
-	protected override async Task OnInitializedAsync()
-	{
-		_hubConnection = new HubConnectionBuilder()
-					.WithUrl(navigationManager.ToAbsoluteUri("/chathub"))
-					.Build();
-		await _hubConnection.StartAsync();
-	}
+	protected override void OnInitialized()
+	=>_hubConnection = HubConnectionService.GetConnection();
+
+	
 	async Task LogoutClicked(){
 		string id = ((await authenticationState).User).Claims.FirstOrDefault(_ => _.Type == ClaimTypes.NameIdentifier)!.Value;
 		await _hubConnection!.SendAsync("RemoveUserAsync", id);

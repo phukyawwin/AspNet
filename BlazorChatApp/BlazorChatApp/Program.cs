@@ -1,5 +1,6 @@
 
 using BlazorChatApp.Authentication;
+using BlazorChatApp.Client.AppStates;
 using BlazorChatApp.Client.Services;
 using BlazorChatApp.Components;
 using BlazorChatApp.Domain.Entities;
@@ -42,8 +43,8 @@ option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection
             builder.Services.AddScoped<ChatRepository>();
 
             builder.Services.AddSignalR();
-            builder.Services.AddScoped<ChatService>();
-           
+            builder.Services.AddScoped<MyHubConnectionService>();
+            builder.Services.AddScoped<AvailableUserState>();
 
             var app = builder.Build();
 

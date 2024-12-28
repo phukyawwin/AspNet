@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace BlazorChatApp.Domain.DTOs
 {
-    public class AvailableUserDto{
-        public string? UserId { get; set; }
-        public string? FullName { get; set; }
+    public class RequestChatDto
+    {
+        public string? SenderId {  get; set; }
+        public string? ReceiverId { get; set; }
     }
 }

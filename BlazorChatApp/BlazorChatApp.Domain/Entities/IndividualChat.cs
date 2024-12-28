@@ -7,14 +7,16 @@ using System.Threading.Tasks;
 
 namespace BlazorChatApp.Domain.Entities
 {
-    public class Chat
+    public class IndividualChat
     {
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Message { get; set; }
+        public string? SenderId { get; set; }
         [Required]
-        public string? UserName { get; set; }
+        public string? ReceiverId { get; set; }
+        [Required]
+        public string Message { get; set; }
         public DateTime Date { get; set; } = DateTime.Now;
-}
+    }
 }

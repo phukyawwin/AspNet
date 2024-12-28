@@ -15,8 +15,9 @@ namespace BlazorChatApp.Infrastructure.Data
             base.OnConfiguring(optionsBuilder);
 
         }
-        public DbSet<Chat> Chats { get; set; }
+        public DbSet<GroupChat> GroupChats { get; set; }
         public DbSet<AvailableUser> AvailableUsers { get; set; }
+        public DbSet<IndividualChat> IndividualChats { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
