@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\BlazorChatApp.Client\BlazorChatApp.Client.csproj" />
     <ProjectReference Include="..\BlazorChatApp.Domain\BlazorChatApp.Domain.csproj" />
   </ItemGroup>
 

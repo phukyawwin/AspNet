@@ -13,17 +13,13 @@ namespace BlazorChatApp.Infrastructure.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-           
+
         }
-
-
         public DbSet<Chat> Chats { get; set; }
+        public DbSet<AvailableUser> AvailableUsers { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-
-
         }
     }
 
